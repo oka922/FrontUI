@@ -1,0 +1,588 @@
+@charset "UTF-8";
+/* Overwriting style.
+   ========================================================================== */
+.fixHeader-inner {
+  margin-bottom: 20px;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.breadcrumbs a {
+  color: #fff;
+}
+
+.mercian-next > a {
+  color: #fff;
+}
+
+.mercian-link > a {
+  color: #fff;
+}
+
+.navigation.pagination.mercian-navigation {
+  margin: 35px 0;
+}
+.navigation.pagination.mercian-navigation > .nav-links > .page-numbers {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  padding: 12px 0;
+  margin: 0 5px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  line-height: 1;
+  text-decoration: none;
+  font-size: 15px;
+  font-size: 1.5rem;
+  vertical-align: top;
+  background-color: #fff;
+}
+.navigation.pagination.mercian-navigation > .nav-links > .page-numbers.dots {
+  border: 0;
+}
+.navigation.pagination.mercian-navigation > .nav-links > .page-numbers.current {
+  color: #fff;
+  background-color: #000;
+}
+.navigation.pagination.mercian-navigation > .nav-links > .page-numbers.next, .navigation.pagination.mercian-navigation > .nav-links > .page-numbers.prev {
+  padding: 14px 0;
+}
+@media only screen and (max-width: 640px) {
+  .navigation.pagination.mercian-navigation > .nav-links > .page-numbers {
+    display: none;
+  }
+  .navigation.pagination.mercian-navigation > .nav-links > .page-numbers.next, .navigation.pagination.mercian-navigation > .nav-links > .page-numbers.prev {
+    display: inline-block;
+  }
+}
+.navigation.pagination.mercian-navigation > .nav-links a {
+  color: #161616;
+  text-decoration: none;
+}
+@media only screen and (min-width: 801px) {
+  .navigation.pagination.mercian-navigation > .nav-links a {
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .navigation.pagination.mercian-navigation > .nav-links a:hover {
+    opacity: 0.6;
+  }
+}
+
+/* Mercian.
+   ========================================================================== */
+.mercian {
+  font-family: Hiragino sans, 'ヒラギノ角ゴシック', Hiragino Kaku Gothic Pro, 'ヒラギノ角ゴ Pro W3', YuGothic, '游ゴシック', Meiryo, 'メイリオ', sans-serif;
+  margin-top: 20px;
+  background: url(../img/mercian/bg_main_pc.jpg) center top no-repeat #000;
+  color: #fff;
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .mercian {
+    margin-top: 0;
+    background-image: url(../img/mercian/bg_main_tb.jpg);
+  }
+}
+@media only screen and (max-width: 640px) {
+  .mercian {
+    background-image: url(../img/mercian/bg_main_sp.jpg);
+    -webkit-background-size: 320px 447px;
+    -o-background-size: 320px 447px;
+    background-size: 320px 447px;
+  }
+}
+
+.mercian-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media only screen and (max-width: 800px) {
+  .mercian-inner {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .mercian-inner {
+    padding: 0 20px;
+  }
+}
+
+.mercianHeader {
+  position: relative;
+  padding: 230px 0 290px;
+  width: 50%;
+  left: 50%;
+}
+@media only screen and (max-width: 800px) {
+  .mercianHeader {
+    position: static;
+    width: 550px;
+    margin: 0 auto;
+    padding: 90px 0 670px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .mercianHeader {
+    padding: 30px 0 300px;
+    width: 290px;
+  }
+}
+.mercianHeader-category {
+  font-size: 19px;
+  font-size: 1.9rem;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #faa619;
+  font-weight: bold;
+  margin-bottom: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: 15px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianHeader-category {
+    font-size: 11px;
+    font-size: 1.1rem;
+  }
+}
+.mercianHeader-category-tag {
+  font-size: 11px;
+  font-size: 1.1rem;
+  font-weight: normal;
+  border: 1px solid #faa619;
+  vertical-align: middle;
+  padding: 4px 12px;
+  margin-left: 7px;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+@media only screen and (max-width: 640px) {
+  .mercianHeader-category-tag {
+    padding: 2px 10px;
+  }
+}
+.mercianHeader-title {
+  font-size: 50px;
+  font-size: 5rem;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+  position: relative;
+  top: 15px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianHeader-title {
+    font-size: 25px;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+}
+.mercianHeader-lead {
+  font-size: 14px;
+  font-size: 1.4rem;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianHeader-lead {
+    font-size: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+}
+.mercianHeader-meta {
+  font-size: 11px;
+  font-size: 1.1rem;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+@media only screen and (max-width: 640px) {
+  .mercianHeader-meta {
+    font-size: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+.mercian-lead {
+  font-size: 19px;
+  font-size: 1.9rem;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 65px;
+}
+@media only screen and (max-width: 640px) {
+  .mercian-lead {
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  .mercian-lead > br {
+    display: none;
+  }
+}
+
+.mercianNavigator {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+  width: 645px;
+  margin: 0 auto 80px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianNavigator {
+    width: 100%;
+  }
+}
+.mercianNavigator-image {
+  float: left;
+  margin-right: 24px;
+  width: 154px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianNavigator-image {
+    width: 77px;
+  }
+}
+.mercianNavigator-image > img {
+  max-width: 100%;
+  height: auto;
+}
+.mercianNavigator-body {
+  overflow: hidden;
+}
+.mercianNavigator-role {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 640px) {
+  .mercianNavigator-role {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+.mercianNavigator-name {
+  font-family: 'Crimson Text', serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 37px;
+  font-size: 3.7rem;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianNavigator-name {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+}
+.mercianNavigator-name > span {
+  font-family: 'YuGothic', '游ゴシック', sans-serif;
+  vertical-align: bottom;
+}
+.mercianNavigator-catch {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 640px) {
+  .mercianNavigator-catch {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+.mercianNavigator-text {
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+@media only screen and (max-width: 640px) {
+  .mercianNavigator-text {
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
+
+.mercianTalk {
+  zoom: 1;
+  width: 875px;
+  margin: 0 auto 30px;
+}
+.mercianTalk:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media only screen and (max-width: 800px) {
+  .mercianTalk {
+    width: 100%;
+  }
+}
+.mercianTalk:last-child {
+  margin-bottom: 0;
+}
+.mercianTalk-thumb {
+  float: left;
+  margin-right: 9px;
+  position: relative;
+}
+.mercianTalk-thumb > figure {
+  width: 60px;
+}
+.mercianTalk-thumb > figure img {
+  max-width: 100%;
+  height: auto;
+}
+.mercianTalk-name {
+  font-family: 'Crimson Text', serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 13px;
+  font-size: 1.3rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mercianTalk-name > span {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-left: 2px;
+}
+.mercianTalk-name-a {
+  color: #e30b17;
+}
+.mercianTalk-name-b {
+  color: #faf719;
+}
+.mercianTalk-name-c {
+  color: #233cf8;
+}
+.mercianTalk-name-d {
+  color: #e30b64;
+}
+.mercianTalk-name-e {
+  color: #6fe30b;
+}
+.mercianTalk-body {
+  -webkit-transform: scale(0.8) translate3d(0, 0, 0);
+  -moz-transform: scale(0.8) translate3d(0, 0, 0);
+  -ms-transform: scale(0.8) translate3d(0, 0, 0);
+  transform: scale(0.8) translate3d(0, 0, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1);
+  /* older webkit */
+  -webkit-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* easeOutBack */
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  -ms-transform-origin: left;
+  -o-transform-origin: left;
+  transform-origin: left;
+  overflow: hidden;
+  position: relative;
+  padding-left: 11px;
+}
+.is-show .mercianTalk-body {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.mercianTalk-body > p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  border: 1px solid #303030;
+  display: inline-block;
+  padding: 18px 24px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+@media only screen and (max-width: 640px) {
+  .mercianTalk-body > p {
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 9px 8px;
+  }
+}
+.mercianTalk-body > p > strong {
+  color: #faa619;
+  font-weight: bold;
+}
+.mercianTalk-body:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: url(../img/mercian/bg_balloon_pc.png) no-repeat;
+  left: 0;
+  top: 24px;
+}
+@media only screen and (max-width: 640px) {
+  .mercianTalk-body:before {
+    background-image: url(../img/mercian/bg_balloon_sp.png);
+    -webkit-background-size: 12px 12px;
+    -o-background-size: 12px 12px;
+    background-size: 12px 12px;
+    top: 16px;
+  }
+}
+
+.mercianImage {
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  margin: 60px auto;
+  text-align: center;
+}
+.mercianImage.is-show {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+@media only screen and (max-width: 640px) {
+  .mercianImage {
+    margin: 30px auto;
+  }
+}
+.mercianImage > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mercian-notice {
+  text-align: center;
+  margin: 70px 0 35px;
+}
+.mercian-notice > p {
+  font-size: 26px;
+  font-size: 2.6rem;
+  display: inline-block;
+  border: 2px solid #303030;
+  font-weight: bold;
+  padding: 24px 60px;
+}
+@media only screen and (max-width: 640px) {
+  .mercian-notice > p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+.mercian-notice > p > span {
+  color: #faa619;
+}
+
+.mercian-btn {
+  text-align: center;
+}
+@media only screen and (max-width: 640px) {
+  .mercian-btn {
+    margin-bottom: 40px;
+  }
+}
+.mercian-btn > a {
+  font-size: 24px;
+  font-size: 2.4rem;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  display: inline-block;
+  font-weight: bold;
+  background-color: #faa619;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 12px 255px;
+  color: #fff;
+}
+.mercian-btn > a > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+}
+.mercian-btn > a > span > span {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.mercian-btn > a:after {
+  content: '';
+  display: inline-block;
+  background: url(../img/mercian/icon_blank_pc.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .mercian-btn > a:after {
+    background: url(../img/mercian/icon_blank_sp.png) no-repeat;
+    -webkit-background-size: 16px 16px;
+    -o-background-size: 16px 16px;
+    background-size: 16px 16px;
+    margin-left: 8px;
+    vertical-align: -0.1em;
+  }
+}
+@media only screen and (min-width: 801px) {
+  .mercian-btn > a {
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+  }
+  .mercian-btn > a:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .mercian-btn > a {
+    width: 100%;
+    padding: 22px 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .mercian-btn > a {
+    font-size: 15px;
+    font-size: 1.5rem;
+    padding: 14px 0;
+  }
+  .mercian-btn > a > span > span {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}

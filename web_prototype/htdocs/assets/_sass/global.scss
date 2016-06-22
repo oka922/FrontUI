@@ -1,0 +1,92 @@
+// ==========================================================================
+// Site settings
+// ==========================================================================
+
+$mobile-width: 640px;
+$voegu_midashi_font_size:24px;
+
+// Color
+// ========================================================================== */
+
+//Base text color
+
+$voegu_footer_color:#222222;
+
+
+
+
+// ==========================================================================
+// Mixin
+// ==========================================================================
+
+
+@mixin desktop {
+  @media only screen and (min-width: $tablet-width + 1) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  // background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin font-size($_target_size, $_base_size:10) {
+  font-size: $_target_size + px;
+  font-size: ($_target_size / $_base_size) * 1rem;
+}
+
+@mixin opacity($opacity) {
+  $opacity-ie: $opacity * 100;
+  opacity: $opacity;
+  filter: alpha(opacity = $opacity-ie);
+}
+
+@mixin transform($value...) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+@mixin transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+     -moz-animation: $animation-name;
+          animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
