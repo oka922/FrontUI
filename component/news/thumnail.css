@@ -1,0 +1,134 @@
+/*research section
+======================*/
+
+
+.research {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 960px;
+  margin-bottom: 40px;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .research {
+    width: 100%;
+  }
+}
+.research-title {
+  line-height: 2;
+}
+.research-title-sub {
+  font-size: 32px;
+}
+.research-title-sub-ja {
+  letter-spacing: 6px;
+  margin-left: 30px;
+}
+.research-content {
+  margin-bottom: 50px;
+}
+.research-content-article {
+  position: relative;
+}
+.research-content-article-title {
+  background-color: #000066;
+  color: #FFF;
+  font-size: 8px;
+  width: 240px;
+  position: absolute;
+  left: 30%;
+}
+@media only screen and (max-width: 800px) {
+  .research-content-article-title {
+    font-size: 5px;
+    width: 240px;
+  }
+}
+.research-content-article-title-first {
+  width: 130px;
+}
+.research-content-article-sub img {
+  height: 100%;
+  max-width: 100%;
+}
+.research-content-name {
+  font-weight: bold;
+}
+.research-content-lead {
+  line-height: 1.5;
+  color: #aaa;
+}
+
+.info-link {
+  padding: 40px 0;
+  background-color: #eee;
+}
+.info-link-inner {
+  margin: 0 auto;
+  width: 960px;
+}
+@media only screen and (max-width: 800px) {
+  .info-link-inner {
+    width: 100%;
+  }
+}
+.info-link .articleIndex:last-child {
+  margin-right: 0;
+}
+
+.row {
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .row {
+    width: 100%;
+  }
+}
+.row .col-2 {
+  width: 960px;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-2 {
+    width: 100%;
+  }
+}
+.row .col-2 .col {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-2 .col {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 {
+    width: 100%;
+  }
+}
+.row .col-3 .col {
+  float: left;
+  width: 33.3%;
+  box-sizing: border-box;
+}
+.row .col-3 .col img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 .col img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 .col {
+    float: none;
+    width: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
