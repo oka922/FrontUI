@@ -1,0 +1,16 @@
+body {
+ 
+ 
+}
+
+.item{
+  position: absolute;
+  width:640px;
+  opacity:0;
+  transition:1s;
+}
+
+.show{
+  opacity:1; 
+  transition:1s;
+}
