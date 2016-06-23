@@ -1,0 +1,167 @@
+/*title section
+======================*/
+.title {
+  font-family: Raleway;
+  font-weight: lighter;
+  margin: 0 auto;
+  width: 400px;
+  padding: 50px 0px 50px;
+  line-height: 1.3;
+  text-align: center;
+  text-align: center;
+  color: #28214c;
+}
+@media only screen and (max-width: 800px) {
+  .title {
+    width: 100%;
+  }
+}
+.title-sub {
+  font-size: 48px;
+}
+.title-sub-ja {
+  font-size: 14px;
+  letter-spacing: 8px;
+}
+/*thumnail section
+======================*/
+
+.thumnail {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 960px;
+  margin-bottom: 40px;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  .thumnail {
+    width: 100%;
+  }
+}
+.thumnail-title {
+  line-height: 2;
+}
+.thumnail-title-sub {
+  font-size: 32px;
+}
+.thumnail-title-sub-ja {
+  letter-spacing: 6px;
+  margin-left: 30px;
+}
+.thumnail-content {
+  margin-bottom: 50px;
+}
+.thumnail-content-name{
+  color:#000;
+}
+.thumnail-content-article {
+  position: relative;
+}
+.thumnail-content-article-title {
+  background-color: #000066;
+  color: #FFF;
+  font-size: 8px;
+  width: 240px;
+  position: absolute;
+  left: 30%;
+}
+@media only screen and (max-width: 800px) {
+  .thumnail-content-article-title {
+    font-size: 5px;
+    width: 240px;
+  }
+}
+.thumnail-content-article-title-first {
+  width: 130px;
+}
+.thumnail-content-article-sub img {
+  height: 100%;
+  max-width: 100%;
+}
+.thumnail-content-name {
+  font-weight: bold;
+}
+.thumnail-content-lead {
+  line-height: 1.5;
+  color: #aaa;
+}
+
+
+
+/*info link  section
+/*col-nを作ることで調整している
+======================*/
+
+.info-link {
+  padding: 40px 0;
+  background-color: #eee;
+}
+.info-link-inner {
+  margin: 0 auto;
+  width: 960px;
+}
+@media only screen and (max-width: 800px) {
+  .info-link-inner {
+    width: 100%;
+  }
+}
+.info-link .articleIndex:last-child {
+  margin-right: 0;
+}
+
+.row {
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .row {
+    width: 100%;
+  }
+}
+.row .col-2 {
+  width: 960px;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-2 {
+    width: 100%;
+  }
+}
+.row .col-2 .col {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-2 .col {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 {
+    width: 100%;
+  }
+}
+.row .col-3 .col {
+  float: left;
+  width: 33.3%;
+  box-sizing: border-box;
+}
+.row .col-3 .col img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 .col img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 .col {
+    float: none;
+    width: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<meta name="viewport" content="width=device-width">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="js/html5shiv-printshiv.js"></script>
+<script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+ <link rel="stylesheet" type="text/css" href="base.css" />
+ <link rel="stylesheet" type="text/css" href="seamless_nav.css" />
+ <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div class="wrapper">
+	<header class="header">
+    <div class="nav-outer">
+    <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <dl>
+          <dt class="center"><a href="#">Anna</a></dt>
+          <dd class="nav-pos">
+            <div class="nav-content">
+              <div class="nav-content-inner"><p>sssssssssssssssssssssssssssssssssssssaaaaaaaaasssssssssssssaaaaaaaaa</p></div>
+            </div>
+          </dd>
+         </dl>
+       </li>
+       <li class="nav-item">
+         <dl>
+           <dt class="center"><a href="#">Betty</a></dt>
+           <dd class="nav-pos">
+             <div class="nav-content">
+               <div class="nav-content-inner">
+                 <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<br>ssssssssssaaaaaaaaasssssssssssssaaaaaaaaa</p>
+               </div>
+            </div>
+           </dd>
+          </dl>
+        </li>
+        <li class="nav-item">
+          <dl>
+            <dt class="center"><a href="#">Cathy</a></dt>
+            <dd class="nav-pos">
+              <div class="nav-content">
+                <div class="nav-content-inner">
+                  <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<div>ffffffffffffffffffff</div>sssssssssssssssssssss<br>ssssssssssaaaaaaaaasssssssssssssaaaaaaaaa</p>
+              </div>
+              </div>
+            </dd>
+           </dl>
+         </li>
+
+         <li class="nav-item">
+           <dl>
+             <dt class="center"><a href="#">Diana</a></dt>
+             <dd class="nav-pos">
+               <div class="nav-content">
+                 <div class="nav-content-inner">
+                   <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<br>ssssssssssaaaaaaaaasssssssssssssaaaaaaaaa</p>
+                 </div>
+              </div>
+             </dd>
+            </dl>
+          </li>
+          <li class="nav-item">
+            <dl>
+              <dt class="center"><a href="#">Diana</a></dt>
+              <dd class="nav-pos">
+                <div class="nav-content">
+                  <div class="nav-content-inner">
+                    <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<br>ssssssssssaaaaaaaaasssssssssssssaaaaaaaaa</p>
+                  </div>
+               </div>
+              </dd>
+             </dl>
+           </li>
+
+    </ul>
+    </nav>
+  </nav>
+	</header>
+
+</div><!-- /wrapper -->
+<!--st js-->
+<script>
+
+
+//dropdown
+$(window).load(function(){
+
+	var heightP = $(".nav-content").height();
+  console.log(heightP);
+  $(".nav-item").mouseover(function(){
+    var heightP = $(this).find(".nav-content").height();
+    $(".nav").addClass("is-dropped");
+    $(".nav").animate({"padding-bottom":heightP}, 250,
+        function(){
+          $(this).find(".nav-content").css({"display":"block"});
+        }
+      );
+
+  $(this).mouseleave(function(){
+       console.log("はず");
+       $(this).find(".nav-content").css({"display":"none"});
+  });
+
+  })
+    $(".nav").mouseleave(function(){
+      $(".nav").animate({"padding-bottom": 0}, 250,
+       function(){
+         $(".nav").removeClass("is-dropped");
+       }
+    );
+  })
+});
+
+
+
+</script>
+
+</body>
+</html>
