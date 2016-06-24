@@ -1,0 +1,85 @@
+/*title section
+======================*/
+.title {
+  font-family: Raleway;
+  font-weight: lighter;
+  margin: 0 auto;
+  width: 400px;
+  padding: 50px 0px 50px;
+  line-height: 1.3;
+  text-align: center;
+  text-align: center;
+  color: #28214c;
+}
+@media only screen and (max-width: 800px) {
+  .title {
+    width: 100%;
+  }
+}
+.title-sub {
+  font-size: 48px;
+}
+.title-sub-ja {
+  font-size: 14px;
+  letter-spacing: 8px;
+}
+
+
+/*info link  section
+/*col-nを作ることで調整している
+/*sectionが他のファイルと被っているので注意
+======================*/
+
+.section {
+  padding: 40px 0;
+  margin-right: 0;
+  background-color: #eee;
+}
+.section-inner {
+  margin: 0 auto;
+  width: 960px;
+}
+@media only screen and (max-width: 800px) {
+  .section-inner {
+    width: 100%;
+  }
+}
+
+
+
+.row {
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .row {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 {
+    width: 100%;
+  }
+}
+.row .col-3 .col {
+  float: left;
+  width: 33.3%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.row .col-3 .col img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 .col img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .row .col-3 .col {
+    float: none;
+    width: 50%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

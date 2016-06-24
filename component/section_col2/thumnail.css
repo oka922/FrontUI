@@ -26,7 +26,7 @@
 /*thumnail section
 ======================*/
 
-.thumnail {
+.section {
   background-color: #fff;
   margin: 0 auto;
   width: 960px;
@@ -38,26 +38,26 @@
     width: 100%;
   }
 }
-.thumnail-title {
+.section-title {
   line-height: 2;
 }
-.thumnail-title-sub {
+.section-title-sub {
   font-size: 32px;
 }
-.thumnail-title-sub-ja {
+.section-title-sub-ja {
   letter-spacing: 6px;
   margin-left: 30px;
 }
-.thumnail-content {
+.section-content {
   margin-bottom: 50px;
 }
 .thumnail-content-name{
   color:#000;
 }
-.thumnail-content-article {
+.thumnail {
   position: relative;
 }
-.thumnail-content-article-title {
+.thumnail-title {
   background-color: #000066;
   color: #FFF;
   font-size: 8px;
@@ -66,7 +66,7 @@
   left: 30%;
 }
 @media only screen and (max-width: 800px) {
-  .thumnail-content-article-title {
+  .thumnail-title {
     font-size: 5px;
     width: 240px;
   }
@@ -74,40 +74,24 @@
 .thumnail-content-article-title-first {
   width: 130px;
 }
-.thumnail-content-article-sub img {
+.thumnail-sub img {
   height: 100%;
   max-width: 100%;
 }
-.thumnail-content-name {
+.thumnail-name {
   font-weight: bold;
 }
-.thumnail-content-lead {
+.thumnail-lead {
   line-height: 1.5;
   color: #aaa;
 }
 
 
 
-/*info link  section
-/*col-nを作ることで調整している
-======================*/
 
-.info-link {
-  padding: 40px 0;
-  background-color: #eee;
-}
-.info-link-inner {
-  margin: 0 auto;
-  width: 960px;
-}
-@media only screen and (max-width: 800px) {
-  .info-link-inner {
-    width: 100%;
-  }
-}
-.info-link .articleIndex:last-child {
-  margin-right: 0;
-}
+/*
+/*row
+======================*/
 
 .row {
   overflow: hidden;
@@ -136,32 +120,5 @@
     float: none;
     margin: 0 auto;
     width: 100%;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .row .col-3 {
-    width: 100%;
-  }
-}
-.row .col-3 .col {
-  float: left;
-  width: 33.3%;
-  box-sizing: border-box;
-}
-.row .col-3 .col img {
-  max-width: 100%;
-  height: auto;
-}
-@media only screen and (max-width: 800px) {
-  .row .col-3 .col img {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .row .col-3 .col {
-    float: none;
-    width: 50%;
-    max-width: 100%;
-    margin: 0 auto;
   }
 }
