@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="resizable/jquery-ui.css" />
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<style>
+.window{
+  border:1px solid #333;
+  min-width: 600px;
+  max-width: 1200px;
+  width: 600px;
+  height:700px;
+  overflow-x: hidden;
+}
+.column{
+  margin: 30px;
+}
+.column-s-title{
+  margin: 15px 0;
+}
+.column-s-title{
+  font-size: 24px;
+}
+.column-s-title-en{
+  font-size: 24px;
+}
+.column-s-title-jp{
+  font-size: 18px;
+}
+.img_thumnail{
+  width:100%;
+}
+
+.window::-webkit-scrollbar
+{
+        width:5px;
+        background:#eee;
+}
+        .window::-webkit-scrollbar:horizontal
+        {
+                height:5px;
+        }
+.window::-webkit-scrollbar-button
+{
+        width:5px;
+        height:5px;
+        background:#666;
+}
+.window::-webkit-scrollbar-piece
+{
+        background:#eee;
+}
+        .window::-webkit-scrollbar-piece:start
+        {
+                background:#eee;
+        }
+.window::-webkit-scrollbar-thumb
+{
+        background:#333;
+}
+.window::-webkit-scrollbar-corner
+{
+        background:#333;
+}
+
+.show{
+  visibility: visible !important;
+}
+.btn_op{
+  color:#999;
+}
+.btn_op:hover{
+  color:#111;
+}
+
+</style>
+
+<div class="wrapper">
+  <header>
+    <h1 class="logo"></h1>
+    <div class="info">about</div>
+  </header>
+    <div class="is-drag is-resizable window">
+      <nav class="window-tab">
+        <ul class="window-tab-nav">
+            <li>project</li>
+            <li>research</li>
+        </ul>
+      </nav>
+      <div class="column">
+        <img class="img_thumnail" src="img/topimage.jpg" alt=""  >
+          <div class="column-s">
+            <h2 class="column-s-title"><span class="column-s-title-en">Products Surface ganerate Energy</span><br><span class="column-s-title-jp">太陽電池を用いた曲面表現プロダクトサーフェイスに発電機能を付加する研究</span></h2>
+            <p class="column-s-s">太陽電池研究の焦点はエネルギー効率の高い材料を生産することに置かれ、使用方法は屋外に設置するなどに限られてきた。国内エネルギー消費の３割が個人生活の中で消費されていることに注目し、
+              エネルギーを生活の中で消費と充電を行い通貨のように使用する生活を提案する。その中で現在私たちが使用しているスマートホンに縛られている生活を送っていることに環境負荷を低減する表面にエネルギー生産能力を与える方法として太陽電池の選択があり、
+              塗料とパネルの選択のなかでパネルを選択したのは、生み出すエネルギー量、三角形型の汎用モジュールを制作することで従来の製品、カバン、水筒、衣服、建築材に対してエネルギーの生成を行うことが出来る。</p>
+            <p class="column-s-s">Product Surface generate enegy lead to undepensable infrustructure.
+              TriSola project is to make triangle solar panel fablic.It  is piece of the mobile energy future.
+              In mobile enegy future,renewable energy is interactive and tranceform.we will consider it important to how many times tranceform energy-form during his life-time.</p>
+          </div>
+      </div>
+    </div>
+
+
+    <nav class="is-drag">
+      <h2 class="column-s-title">Project</h2>
+      <p class="column-s-title-jp">
+      <a class="cat_module btn_op">
+                      <span class="t_a">M</span>
+                      <span class="t_a">o</span>
+                      <span class="t_a">d</span>
+                      <span class="t_a">u</span>
+                      <span class="t_a">l</span>
+                      <span class="t_a">e</span>
+      </a>とかを
+      <a class="cat_extreme btn_op">
+                    <span class="t_a">極</span>
+                    <span class="t_a">限</span>
+                    <span class="t_a">環</span>
+                    <span class="t_a">境</span>
+      </a>で使って
+      <a class="cat_charcoal btn_op">
+                   <span class="t_a">炭</span>
+      </a>とか
+      <a class="cat_antena btn_op">
+                    <span class="t_a">ア</span>
+                    <span class="t_a">ン</span>
+                    <span class="t_a">テ</span>
+                    <span class="t_a">ナ</span></a>で
+      <a class="cat_energy btn_op">
+                  <span class="t_a">エ</span>
+                  <span class="t_a">ネ</span>
+                  <span class="t_a">ル</span>
+                  <span class="t_a">ギ</span>
+                  <span class="t_a">ー</span>
+      </a>を作って<br>
+      <a class="cat_wireless btn_op">
+                    <span class="t_a">無</span>
+                    <span class="t_a">線</span>
+                    <span class="t_a">給</span>
+                    <span class="t_a">電</span>
+      </a>とかで世の中良くしよう
+      <a class="cat_web btn_op">
+                    <span class="t_a">W</span>
+                    <span class="t_a">E</span>
+                    <span class="t_a">B</span>
+      </a>とか
+      <a class="cat_bio btn_op">
+                    <span class="t_a">バ</span>
+                    <span class="t_a">イ</span>
+                    <span class="t_a">オ</span>
+      </a>とか、そういう感じで。
+    </p>
+    </nav>
+</div>
+
+<div id="about">
+    <div id="aboutInner" class="cf">
+        <dl>
+            <dt class="font">PROFILE</dt>
+            <dd>岡崎　太祐　Okazaki Taisuke<br />
+            Environmental Designer<br />
+            B3 Keio University<br />
+
+            <dt class="font">CONTACT</dt>
+            <dd><a href="mailto:info@taisuke.co" target="_blank">info@lth.com</a></dd>
+
+            <dt class="font">RESEARCH</dt>
+            <dd class="last"極限環境デザインを学んでいます。砂漠、寒冷地、高地など極限環境の中で特に離島における人間の居住空間の提案をエネルギーの観点から行っています。<br />
+            都市と同等の快適な空間を極限環境に実現する手法としてエネルギーの独立化を行うために太陽光電池とレクテナを用いて無線給電のプロトタイプ制作を行い、<br />
+            実際に伊豆諸島の利島において評価を行い、居住困難環境における生活の提案を行っています<br /><br />
+            to living extreme space:mountain,island,these plan apply for the city.particluraly concidering rectena means energy transimit.<br />
+            these technology come into indepensable infrustructure based on city and tokyo,so our countreme exonomy is decreasing,<br />
+            we plan to indepensable vilaagelike commune,to promote more happiness</dd>
+        </dl>
+
+        <div class="aboutInner_left"><img src="/material/images/img_profile.jpg" alt="" /></div>
+    </div>
+</div>
+<style>
+  .about{
+    position: absolute;
+    top:0px;
+  }
+</style>
+<script>
+$(window).load(function(){
+  
+});
+
+</script>
+
+</div>
+<!--window_module-->
+<script>
+  var c_height = $(".column").innerHeight();
+  $(function(){
+    $(".is-drag").draggable();
+  });
+  $(function() {
+   $( ".is-resizable" ).resizable({
+     maxHeight: 800,
+     maxWidth: c_height,
+     minHeight: 350,
+     minWidth: 650
+   });
+ });
+</script>
+
+<script>
+//navigation
+$(window).load(function(){
+    $(".t_a").css("visibility","hidden");
+    ImgSlide(".btn_op",".t_a");
+});
+
+
+function ImgSlide(item_slide,ani_word) {
+
+    var img = $(item_slide);
+    var w = $(ani_word);
+    var num = w.length;
+    console.log(num);
+    count = 0,//表示されている画像の順番
+    interval = 100;
+    setInterval(function() {
+    $(img).find(w).eq(count).addClass("show");//eqで配列の番号指定ができる
+    count = count + 1;//次の画像になる。
+    }, interval);
+
+}
+
+</script>
+</body>
+</html>

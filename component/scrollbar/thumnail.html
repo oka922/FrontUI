@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="resizable/jquery-ui.css" />
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<style>
+.window{
+  border:1px solid #333;
+  min-width: 600px;
+  max-width: 1200px;
+  width: 600px;
+  height:700px;
+}
+//http://dev.classmethod.jp/client-side/webkit-scrollbar-design/
+//参考スクロールバーcss
+#scrollbar01::-webkit-scrollbar
+{
+        width:5px;
+        background:#eee;
+}
+        #scrollbar01::-webkit-scrollbar:horizontal
+        {
+                height:5px;
+        }
+#scrollbar01::-webkit-scrollbar-button
+{
+        width:5px;
+        height:5px;
+        background:#666;
+}
+#scrollbar01::-webkit-scrollbar-piece
+{
+        background:#eee;
+}
+        #scrollbar01::-webkit-scrollbar-piece:start
+        {
+                background:#eee;
+        }
+#scrollbar01::-webkit-scrollbar-thumb
+{
+        background:#333;
+}
+#scrollbar01::-webkit-scrollbar-corner
+{
+        background:#333;
+}
+</style>
+
+<div class="wrapper">
+    <div class="is-drag is-resizable window">
+      <div class="column">
+        <div class="scroll-opacity"><img src="img/dummy.jpg" alt="" ></div>
+        <p class="">Insert in a lead sentense.Insert in a lead sentense.Insert in a lead sentense.</p>
+      </div>
+    </div>
+</div>
+
+<script>
+  var c_height = $(".column").innerHeight();
+  $(function(){
+    $(".is-drag").draggable();
+  });
+  $(function() {
+   $( ".is-resizable" ).resizable({
+     maxHeight: 800,
+     maxWidth: c_height,
+     minHeight: 350,
+     minWidth: 650
+   });
+ });
+</script>
+</body>
+</html>
