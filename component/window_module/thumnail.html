@@ -78,11 +78,41 @@
 }
 .btn_op:hover{
   color:#111;
+  transition: 1s;
 }
 
 </style>
 
 <div class="wrapper">
+  <div class="about">
+      <div class="aboutInner" class="cf">
+          <dl>
+              <dt class="font">PROFILE</dt>
+              <dd>岡崎　太祐　Okazaki Taisuke<br />
+              Environmental Designer<br />
+              B3 Keio University<br />
+
+              <dt class="font">CONTACT</dt>
+              <dd><a href="mailto:info@taisuke.co" target="_blank">info@lth.com</a></dd>
+
+              <dt class="font">RESEARCH</dt>
+              <dd class="last"極限環境デザインを学んでいます。砂漠、寒冷地、高地など極限環境の中で特に離島における人間の居住空間の提案をエネルギーの観点から行っています。<br />
+              都市と同等の快適な空間を極限環境に実現する手法としてエネルギーの独立化を行うために太陽光電池とレクテナを用いて無線給電のプロトタイプ制作を行い、<br />
+              実際に伊豆諸島の利島において評価を行い、居住困難環境における生活の提案を行っています<br /><br />
+              to living extreme space:mountain,island,these plan apply for the city.particluraly concidering rectena means energy transimit.<br />
+              these technology come into indepensable infrustructure based on city and tokyo,so our countreme exonomy is decreasing,<br />
+              we plan to indepensable vilaagelike commune,to promote more happiness</dd>
+          </dl>
+
+          <div class="aboutInner_left"><img src="/material/images/img_profile.jpg" alt="" /></div>
+      </div>
+  </div>
+  <style>
+      .about{
+        position: relative;
+        top: -90px;
+      }
+  </style>
   <header>
     <h1 class="logo"></h1>
     <div class="info">about</div>
@@ -106,93 +136,90 @@
               In mobile enegy future,renewable energy is interactive and tranceform.we will consider it important to how many times tranceform energy-form during his life-time.</p>
           </div>
       </div>
+      <div class="column">
+        <p>電子回路設計
+          単純に直列入力なのにフィルタとか登場するのはアンテナから受信とかを想定しているのか、安定電力電源回路にどうしてバスカップコンデンサがいるのか。
+・アンプに入る電圧は二点間の電位差（残りの電子を押し出す勢い）だから、アンプに入るのはどこどどこの差になっているのか。
+通電したての動き。スイッチングとコンデンサと直流だから通さないのに、どうやって電源もらっているの、ベースに電荷入らないから、スイッチングするのはICだよね。
+リニア・レギュレータはアンプの参照電圧と一致するまで負帰還してトランジスタで通す、最初の始まりはどうなっている？
+電荷の動きで一致しない。
+
+
+
+正三角形の単一単位は修正する
+→正多面体を基礎とする球に近い多面体の設計を参考にして、
+モジュールの作り方を再検討する。正三角形はいけない。すると研究名称と太陽電池のカッティングと個人使用の可能性に関わる研究
+剛体折の再来・・・・、一つの曲面を、設定した３辺以上のサイズで分割するアルゴリズムについて。dePolygon｜
+で,四角形ポリゴンより三角形ポリゴンが良いのは設計の段階で面の破綻が起こらない、、無駄が出ないのはどっちかだろうか、四角形でも実際いいわけだ。十亀折もあるし。それでも今回三角形を採用した理由は｜三角形のほうがほぼ同一モジュールで作れる形態の自由度が四角形よりも聞くから|数値データから三角メッシュを作る実装が楽｜データをとるボクセル単位で平均化を行う－ボクセルを三角形のほうがメンドクサクナイ？総当りの計算のだと処理が大変じゃない？、あと配線問題。互いに共有している辺の間の傾きが大きくなければ面を結合していく。
+</p>
+      </div>
     </div>
 
 
-    <nav class="is-drag">
+    <nav class="is-drag project-nav">
       <h2 class="column-s-title">Project</h2>
       <p class="column-s-title-jp">
       <a class="cat_module btn_op">
-                      <span class="t_a">M</span>
-                      <span class="t_a">o</span>
-                      <span class="t_a">d</span>
-                      <span class="t_a">u</span>
-                      <span class="t_a">l</span>
-                      <span class="t_a">e</span>
+                      <span class="t_a_1 de">M</span>
+                      <span class="t_a_2 de">o</span>
+                      <span class="t_a_3 de">d</span>
+                      <span class="t_a_4 de">u</span>
+                      <span class="t_a_5 de">l</span>
+                      <span class="t_a_6 de">e</span>
       </a>とかを
       <a class="cat_extreme btn_op">
-                    <span class="t_a">極</span>
-                    <span class="t_a">限</span>
-                    <span class="t_a">環</span>
-                    <span class="t_a">境</span>
+                    <span class="t_a_1 de">極</span>
+                    <span class="t_a_2 de">限</span>
+                    <span class="t_a_3 de">境</span>
+                    <span class="t_a_4 de">環</span>
       </a>で使って
       <a class="cat_charcoal btn_op">
-                   <span class="t_a">炭</span>
+                   <span class="t_a_1 de">炭</span>
       </a>とか
       <a class="cat_antena btn_op">
-                    <span class="t_a">ア</span>
-                    <span class="t_a">ン</span>
-                    <span class="t_a">テ</span>
-                    <span class="t_a">ナ</span></a>で
+                    <span class="t_a_1 de">ア</span>
+                    <span class="t_a_2 de">ン</span>
+                    <span class="t_a_3 de">ナ</span>
+                    <span class="t_a_4 de">テ</span>
+      </a>で
       <a class="cat_energy btn_op">
-                  <span class="t_a">エ</span>
-                  <span class="t_a">ネ</span>
-                  <span class="t_a">ル</span>
-                  <span class="t_a">ギ</span>
-                  <span class="t_a">ー</span>
+                  <span class="t_a_1 de">エ</span>
+                  <span class="t_a_2 de">ネ</span>
+                  <span class="t_a_3 de">ル</span>
+                  <span class="t_a_4 de">ギ</span>
+                  <span class="t_a_5 de">ー</span>
       </a>を作って<br>
       <a class="cat_wireless btn_op">
-                    <span class="t_a">無</span>
-                    <span class="t_a">線</span>
-                    <span class="t_a">給</span>
-                    <span class="t_a">電</span>
+                    <span class="t_a_1 de">無</span>
+                    <span class="t_a_2 de">線</span>
+                    <span class="t_a_3 de">電</span>
+                    <span class="t_a_4 de">給</span>
       </a>とかで世の中良くしよう
       <a class="cat_web btn_op">
-                    <span class="t_a">W</span>
-                    <span class="t_a">E</span>
-                    <span class="t_a">B</span>
+                    <span class="t_a_1 de">W</span>
+                    <span class="t_a_2 de">E</span>
+                    <span class="t_a_3 de">B</span>
       </a>とか
       <a class="cat_bio btn_op">
-                    <span class="t_a">バ</span>
-                    <span class="t_a">イ</span>
-                    <span class="t_a">オ</span>
+                    <span class="t_a_1 de">バ</span>
+                    <span class="t_a_2 de">イ</span>
+                    <span class="t_a_3 de">オ</span>
       </a>とか、そういう感じで。
     </p>
     </nav>
 </div>
 
-<div id="about">
-    <div id="aboutInner" class="cf">
-        <dl>
-            <dt class="font">PROFILE</dt>
-            <dd>岡崎　太祐　Okazaki Taisuke<br />
-            Environmental Designer<br />
-            B3 Keio University<br />
 
-            <dt class="font">CONTACT</dt>
-            <dd><a href="mailto:info@taisuke.co" target="_blank">info@lth.com</a></dd>
-
-            <dt class="font">RESEARCH</dt>
-            <dd class="last"極限環境デザインを学んでいます。砂漠、寒冷地、高地など極限環境の中で特に離島における人間の居住空間の提案をエネルギーの観点から行っています。<br />
-            都市と同等の快適な空間を極限環境に実現する手法としてエネルギーの独立化を行うために太陽光電池とレクテナを用いて無線給電のプロトタイプ制作を行い、<br />
-            実際に伊豆諸島の利島において評価を行い、居住困難環境における生活の提案を行っています<br /><br />
-            to living extreme space:mountain,island,these plan apply for the city.particluraly concidering rectena means energy transimit.<br />
-            these technology come into indepensable infrustructure based on city and tokyo,so our countreme exonomy is decreasing,<br />
-            we plan to indepensable vilaagelike commune,to promote more happiness</dd>
-        </dl>
-
-        <div class="aboutInner_left"><img src="/material/images/img_profile.jpg" alt="" /></div>
-    </div>
-</div>
 <style>
-  .about{
-    position: absolute;
-    top:0px;
+
+  .project-nav{
+    right:0;
+    width: 750px;
   }
 </style>
 <script>
 $(window).load(function(){
-  
+
 });
 
 </script>
@@ -217,25 +244,37 @@ $(window).load(function(){
 <script>
 //navigation
 $(window).load(function(){
-    $(".t_a").css("visibility","hidden");
-    ImgSlide(".btn_op",".t_a");
-});
+    $(".de").css("visibility","hidden");
+    typeAnime(".btn_op",".t_a_");
+    navdrop(".about",".info")
+    });
 
 
-function ImgSlide(item_slide,ani_word) {
+function typeAnime(ancer_word,ani_word) {
 
-    var img = $(item_slide);
-    var w = $(ani_word);
-    var num = w.length;
-    console.log(num);
+    var aw = $(ancer_word);//変化をかける単語
+    var type = $(ani_word);//変化する一文字一文字
     count = 0,//表示されている画像の順番
     interval = 100;
-    setInterval(function() {
-    $(img).find(w).eq(count).addClass("show");//eqで配列の番号指定ができる
+    var timet = setInterval(function() {
+    $(aw).find(ani_word+count).css("visibility","visible");
     count = count + 1;//次の画像になる。
+    console.log(ani_word+count);
+    if(count >10){
+      clearInterval(timet);
+    }
     }, interval);
-
 }
+
+// 
+// function navdrop(ancer_nav,btn){
+//       var an = $("ancer_nav");
+//       var btn = $("btn");
+//     	btn.on('click',function() {
+//        $(an).animate({"top":0)},500);
+//       console.log("2e");
+//       });
+// }
 
 </script>
 </body>
