@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="resizable/jquery-ui.css" />
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<style>
+
+.window-nav{
+  position: absolute;
+  top: -30px;
+}
+.window-nav-tab{
+  clear: both;
+}
+.window-nav-tab-a {
+    float: left;
+    margin-left: 10px;
+    border: 1px solid;
+    padding: 5px;
+}
+.is-render{
+  border:1px solid #333;
+  min-width: 600px;
+  max-width: 1200px;
+  width: 600px;
+  height:700px;
+  overflow-x: hidden;
+}
+.column{
+  margin: 30px;
+}
+.column-s-title{
+  margin: 15px 0;
+}
+.column-s-title{
+  font-size: 24px;
+}
+.column-s-title-en{
+  font-size: 24px;
+}
+.column-s-title-jp{
+  font-size: 18px;
+}
+.img_thumnail{
+  width:100%;
+}
+
+.is-render::-webkit-scrollbar
+{
+        width:5px;
+        background:#eee;
+}
+        .is-render::-webkit-scrollbar:horizontal
+        {
+                height:5px;
+        }
+.is-render::-webkit-scrollbar-button
+{
+        width:5px;
+        height:5px;
+        background:#666;
+}
+.is-render::-webkit-scrollbar-piece
+{
+        background:#eee;
+}
+        .is-render::-webkit-scrollbar-piece:start
+        {
+                background:#eee;
+        }
+.is-render::-webkit-scrollbar-thumb
+{
+        background:#333;
+}
+.is-render::-webkit-scrollbar-corner
+{
+        background:#333;
+}
+.column{
+  display: none;
+}
+.show{
+  visibility: visible !important;
+}
+.is-show{
+  display: block !important;
+}
+
+.is-clicked{
+  background:black;
+  color: white;
+}
+.btn_op{
+  color:#999;
+}
+.btn_op:hover{
+  color:#111;
+  transition: 1s;
+}
+
+  .project-nav{
+    right:0;
+    width: 750px;
+  }
+  .close_btn{
+    font-size: 18px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 27px;
+}
+</style>
+
+<div class="wrapper">
+
+  <header>
+
+  </header>
+    <div class="is-drag is-resizable window">
+        <nav class="window-nav">
+          <ul class="window-nav-tab">
+              <li class="window-nav-tab-a id-project is-clicked">project</li>
+              <li class="window-nav-tab-a id-research">research</li>
+          </ul>
+          <div class="close_btn">×</div>
+        </nav>
+        <div class="is-render">
+        <div class="column is-show project-c">
+          <img class="img_thumnail" src="img/topimage.jpg" alt=""  >
+            <div class="column-s">
+              <h2 class="column-s-title"><span class="column-s-title-en">Products Surface ganerate Energy</span><br><span class="column-s-title-jp">太陽電池を用いた曲面表現プロダクトサーフェイスに発電機能を付加する研究</span></h2>
+              <p class="column-s-s">太陽電池研究の焦点はエネルギー効率の高い材料を生産することに置かれ、使用方法は屋外に設置するなどに限られてきた。国内エネルギー消費の３割が個人生活の中で消費されていることに注目し、
+                エネルギーを生活の中で消費と充電を行い通貨のように使用する生活を提案する。その中で現在私たちが使用しているスマートホンに縛られている生活を送っていることに環境負荷を低減する表面にエネルギー生産能力を与える方法として太陽電池の選択があり、
+                塗料とパネルの選択のなかでパネルを選択したのは、生み出すエネルギー量、三角形型の汎用モジュールを制作することで従来の製品、カバン、水筒、衣服、建築材に対してエネルギーの生成を行うことが出来る。</p>
+              <p class="column-s-s">Product Surface generate enegy lead to undepensable infrustructure.
+                TriSola project is to make triangle solar panel fablic.It  is piece of the mobile energy future.
+                In mobile enegy future,renewable energy is interactive and tranceform.we will consider it important to how many times tranceform energy-form during his life-time.</p>
+            </div>
+        </div>
+          <div class="column research-c">
+            <h2 class="column-s-title">電子回路設計</h2><p>単純に直列入力なのにフィルタとか登場するのはアンテナから受信とかを想定しているのか、安定電力電源回路にどうしてバスカップコンデンサがいるのか。<br>
+              ・アンプに入る電圧は二点間の電位差（残りの電子を押し出す勢い）だから、アンプに入るのはどこどどこの差になっているのか。<br>
+              通電したての動き。スイッチングとコンデンサと直流だから通さないのに、どうやって電源もらっているの、ベースに電荷入らないから、スイッチングするのはICだよね。<br>
+              リニア・レギュレータはアンプの参照電圧と一致するまで負帰還してトランジスタで通す、最初の始まりはどうなっている？<br>
+              電荷の動きで一致しない。正三角形の単一単位は修正する→正多面体を基礎とする球に近い多面体の設計を参考にして、<br>
+              モジュールの作り方を再検討する。正三角形はいけない。すると研究名称と太陽電池のカッティングと個人使用の可能性に関わる研究<br>
+              剛体折の再来・・・・、一つの曲面を、設定した３辺以上のサイズで分割するアルゴリズムについて。dePolygon｜<br>
+              で,四角形ポリゴンより三角形ポリゴンが良いのは設計の段階で面の破綻が起こらない、、無駄が出ないのはどっちかだろうか、四角形でも実際いいわけだ。十亀折もあるし。それでも今回三角形を採用した理由は｜三角形のほうがほぼ同一モジュールで作れる形態の自由度が四角形よりも聞くから|数値データから三角メッシュを作る実装が楽｜データをとるボクセル単位で平均化を行う－ボクセルを三角形のほうがメンドクサクナイ？総当りの計算のだと処理が大変じゃない？、あと配線問題。互いに共有している辺の間の傾きが大きくなければ面を結合していく。
+            </p>
+          </div>
+      </div>
+    </div>
+</div>
+<!--window_module-->
+<script>
+  var c_height = $(".column").innerHeight();
+  $(function(){
+    $(".is-drag").draggable();
+  });
+  $(function() {
+   $( ".is-resizable" ).resizable({
+     maxHeight: 800,
+     maxWidth: c_height,
+     minHeight: 350,
+     minWidth: 650
+   });
+ });
+</script>
+
+<script>
+$(window).load(function(){
+  changeTab(".window-nav-tab-a",".id-project",".id-research",".research-c");
+  changeTab(".window-nav-tab-a",".id-research",".id-project",".project-c");
+  $(".close_btn").on("click",function(){
+    $(".window").css("display","none");
+  })
+});
+
+  function changeTab(tab,tab_name_a,tab_name_b,column){
+    var tabtn = $(tab);
+    var tabpr = $(tab_name_a);
+    var tabre = $(tab_name_b);
+    tabre.on('click',function() {
+      tabpr.removeClass("is-clicked");
+      tabre.addClass("is-clicked");
+      $(".is-render").find(".column").removeClass("is-show");
+      $(".is-render").find(column).addClass("is-show");
+    });
+  }
+</script>
+
+</body>
+</html>
