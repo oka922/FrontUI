@@ -1,0 +1,85 @@
+/* SVG icon base */
+body {
+	margin:0;
+	padding:0;
+	background-color: #FCFAF2;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	color:#333;
+	border-top:6px solid #333;
+}
+h1, h2 {
+	font-weight:normal;
+}
+
+.icon {
+	width:100px;
+	height:100px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.container {
+	width:960px;
+	margin:20px auto;
+}
+
+.flat-blue {
+	fill: #53A0FD;
+}
+
+section {
+	border-bottom:1px dotted #ccc;
+	padding-bottom:20px;
+}
+
+/* Fill & Outline */
+.pink {
+	fill: #E16B8C;
+}
+.outline{
+	stroke: #E16B8C;
+	stroke-width: 3px;
+	fill: transparent;
+}
+.pink-hover:hover {
+	fill:#F8C3CD;
+}
+.outline-hover:hover {
+	stroke: #E16B8C;
+	fill:#F8C3CD;
+  	stroke-width: 3px;
+}
+.pink-hover:hover , .outline-hover:hover {
+	-webkit-transition: all .35s ease-out;
+	-moz-transition: all .35s ease-out;
+	-ms-transition: all .35s ease-out;
+	transition: all .35s ease-out;
+	cursor:pointer;
+}
+
+/* Gradations */
+
+.green { fill: url(./index.html#green-gradient); }
+.orange { fill: url(./index.html#orange-gradient); }
+.red { fill: url(./index.html#red-gradient); }
+.blue { fill: url(./index.html#blue-gradient); }
+.purple { fill: url(./index.html#purple-gradient); }
+
+/* Filters */
+.filter-blur {
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+}
+.filter-drop-shadow  {
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+	-ms-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+.filter-inner-shadow  {
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4) inset;
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.4) inset;
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,0.4) inset;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="ja" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>ただのリンクじゃ味気ない、ちゃんと押せる感じのボタンにする。</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div class="section">
+  <p>テキストリンクをボタンっぽいデザインにしたい時に役立つ、使い回しが利く汎用的なスタイルを紹介する。</p>
+  <p>
+    <a class="btn prev">戻る矢印ボタン</a>
+    <a class="btn">矢印なしボタン</a>
+    <a class="btn next">進む矢印ボタン</a>
+  </p>
+  
+  <p>文章中に登場する<span class="btn inline">ボタン</span>にも。</p>
+  
+  <p>画像ボタン<a class="btn inline bnr cafe"><img src="bnr.png" alt="Lopan cafe" width="300" height="120"></a>にも。</p>
+  
+  <h2 class="label">ボタンのベースとなるCSS</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.btn {</code></li>
+      <li><code>  display: inline-block;</code></li>
+      <li><code>  position: relative;</code></li>
+      <li><code>  padding: .3em 1em;</code></li>
+      <li><code>  border-radius: 3px;</code></li>
+      <li><code>  color: white;</code></li>
+      <li><code>  background-color: #e57981;</code></li>
+      <li><code>  text-decoration: none;</code></li>
+      <li><code>  -webkit-transition: background-color .3s, box-shadow .3s, -webkit-transform .3s;</code></li>
+      <li><code>  transition: background-color .3s, box-shadow .3s, transform .3s;</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>a.btn:hover {</code></li>
+      <li><code>  background-color: #ec959b;</code></li>
+      <li><code>  box-shadow: 0 5px 0 #dc5f67, 0 10px 3px rgba(0,0,0,.1);</code></li>
+      <li><code>  -webkit-transform: translateY(-5px);</code></li>
+      <li><code>  transform: translateY(-5px);</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>a.btn:active {</code></li>
+      <li><code>  background-color: #e57981;</code></li>
+      <li><code>  box-shadow: 0 2px 0 #dc5f67, 0 4px 1px rgba(0,0,0,.1);</code></li>
+      <li><code>  -webkit-transform: translateY(-2px);</code></li>
+      <li><code>  transform: translateY(-2px);</code></li>
+      <li><code>  transition-duration: .1s;</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

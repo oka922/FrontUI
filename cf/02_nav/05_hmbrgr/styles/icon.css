@@ -1,0 +1,65 @@
+.demo {
+  margin: auto;
+  margin-top: 60px;
+  padding: 75px 0 10px;
+  width: 22px;
+}
+
+.menu-icon {
+  display: block;
+  float: left;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.menu-icon span {
+  display: block;
+  width: 22px;
+  height: 4px;
+  background: #333333;
+  margin-bottom: 2px;
+  border-radius: 1px;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.menu-icon span.bar1 {
+  margin-top: 2px;
+}
+.menu-icon:hover span {
+  margin-bottom: 4px;
+}
+.menu-icon:hover span.bar1 {
+  margin-top: 0px;
+}
+.menu-icon.active {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.menu-icon.active:hover span {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.menu-icon.active .bar1 {
+  -webkit-transform: rotate(0deg) translateY(6px);
+  -moz-transform: rotate(0deg) translateY(6px);
+  -ms-transform: rotate(0deg) translateY(6px);
+  -o-transform: rotate(0deg) translateY(6px);
+  transform: rotate(0deg) translateY(6px);
+}
+.menu-icon.active .bar2 {
+  opacity: 0;
+}
+.menu-icon.active .bar3 {
+  -webkit-transform: rotate(-90deg) translateX(5px);
+  -moz-transform: rotate(-90deg) translateX(5px);
+  -ms-transform: rotate(-90deg) translateX(5px);
+  -o-transform: rotate(-90deg) translateX(5px);
+  transform: rotate(-90deg) translateX(5px);
+}

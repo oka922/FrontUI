@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--[if IE 8]> <html lang="ja" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>テキストでも画像でも、小要素を親要素の中央に絶対配置するスニペット。</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div class="container">
+  <img src="pan.png" alt="" width="150" height="264" class="centering pan">
+  <img src="halo.png" alt="" width="604" height="602" class="centering rotate">
+  <p class="centering txt">可変する要素内に絶対センタリング。<br>
+    テキスト自体は左揃えでも、上下左右に中央配置。<br>
+    行数・文字数に関係なく上下左右に中央配置。</p>
+</div>
+
+<div class="section">
+  <p>キャッチコピーなどの複数行のテキストを、サイズが可変する要素に対しても絶対中央に配置したい場合に使えるテクニックを紹介する。</p>
+  
+  <h2 class="label">HTML</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>&lt;div class="container"&gt;</code></li>
+      <li><code>  &lt;img src="pan.png" alt="" width="150" height="264" class="centering pan"&gt;</code></li>
+      <li><code>  &lt;img src="halo.png" alt="" width="604" height="602" class="centering rotate"&gt;</code></li>
+      <li><code>  &lt;p class="centering txt"&gt;可変する要素内に絶対センタリング。&lt;br&gt;</code></li>
+      <li><code>    テキスト自体は左揃えでも、上下左右に中央配置。&lt;br&gt;</code></li>
+      <li><code>    行数・文字数に関係なく上下左右に中央配置。&lt;/p&gt;</code></li>
+      <li><code>&lt;/div&gt;</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">CSS</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.centering {</code></li>
+      <li><code>  position: absolute;</code></li>
+      <li><code>  top: 50%;</code></li>
+      <li><code>  left: 50%;</code></li>
+      <li><code>  margin: 0;</code></li>
+      <li><code>  white-space: nowrap;</code></li>
+      <li><code>  -ms-transform: translate(-50%, -50%);</code></li>
+      <li><code>  -webkit-transform: translate(-50%, -50%);</code></li>
+      <li><code>  transform: translate(-50%, -50%);</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

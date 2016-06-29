@@ -1,0 +1,246 @@
+/* snippet/ArrowButton */
+
+body {
+  font-family: "Yu Gothic", YuGothic, sans-serif;
+}
+
+pre, code {
+  font-family: Consolas, Courier, 'Andale Mono', monospace;
+}
+
+/* シンタックスリスト */
+
+.label {
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+.label span {
+  font-size: 80%;
+}
+
+.synthax {
+  background-color: #593869;
+  font-size: 80%;
+  text-align: left;
+  white-space: normal;
+  border-radius: 3px;
+}
+
+.synthax ol {
+  padding: 0 0 0 3.8em;
+}
+
+.synthax ol li {
+  margin: 0;
+  padding: .3em .5em;
+  color: white;
+  background-color: white;
+  line-height: 1.2;
+}
+
+.synthax ol li:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.synthax ol li code {
+  margin: 0;
+  color: #333;
+  white-space: pre;
+}
+
+/* contents */
+
+.section {
+  position: relative;
+  width: 80%;
+  max-width: 960px;
+  height: 33.333333%;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.section p {
+  text-align: center;
+}
+
+/* 矢印付きシンプルボタン */
+
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: .3em 1em;
+  border-radius: 3px;
+  color: white;
+  background-color: #e57981;
+  text-decoration: none;
+  -webkit-transition: background-color .3s, box-shadow .3s, -webkit-transform .3s;
+  transition: background-color .3s, box-shadow .3s, transform .3s;
+}
+
+a.btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn.next {
+  padding-right: 2em;
+}
+
+.btn.prev {
+  padding-left: 2em;
+}
+
+.btn.inline {
+  margin: 0 .3em;
+  padding: .3em;
+  line-height: 1;
+}
+
+.btn.bnr {
+  padding: 0;
+}
+
+.btn.bnr img {
+  border-radius: 3px;
+  vertical-align: middle;
+  -webkit-transition: -webkit-filter .3s;
+}
+
+a.btn:hover {
+  background-color: #ec959b;
+  box-shadow: 0 5px 0 #dc5f67, 0 10px 3px rgba(0,0,0,.1);
+  -ms-transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.btn.bnr:hover img {
+  -webkit-filter: brightness(1.1);
+}
+
+a.btn:active {
+  background-color: #e57981;
+  box-shadow: 0 2px 0 #dc5f67, 0 4px 1px rgba(0,0,0,.1);
+  -ms-transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-transition-duration: .1s;
+  transition-duration: .1s;
+}
+
+/* arrows */
+
+.btn.next::after,
+.btn.prev::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  width: .5em;
+  height: .5em;
+  border-style: solid;
+  border-color: white;
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.btn.next::after {
+  right: 1em;
+  border-width: .2em .2em 0 0;
+}
+
+.btn.prev::before {
+  left: 1em;
+  border-width: 0 0 .2em .2em;
+}
+
+.next:hover::after,
+.prev:hover::before {
+  -webkit-animation: larger .3s;
+  animation: larger .3s;
+}
+
+.next:active::after,
+.prev:active::before {
+  -webkit-animation: smaller .3s;
+  animation: smaller .3s;
+}
+
+@-webkit-keyframes larger {
+  30% { -webkit-transform: translateY(-50%) rotate(45deg) scale(1.2); }
+  100% { -webkit-transform: translateY(-50%) rotate(45deg) scale(1); }
+}
+@keyframes larger {
+  30% { transform: translateY(-50%) rotate(45deg) scale(1.2); }
+  100% { transform: translateY(-50%) rotate(45deg) scale(1); }
+}
+
+@-webkit-keyframes smaller {
+  30% { -webkit-transform: translateY(-50%) rotate(45deg) scale(.8); }
+  100% { -webkit-transform: translateY(-50%) rotate(45deg) scale(1); }
+}
+@keyframes smaller {
+  30% { transform: translateY(-50%) rotate(45deg) scale(.8); }
+  100% { transform: translateY(-50%) rotate(45deg) scale(1); }
+}
+
+/* Lopan cafe */
+
+.btn.bnr.cafe {
+  background-image: url(bnr_o.png);
+}
+
+.btn.bnr.cafe img {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.btn.bnr.cafe:hover img {
+  opacity: 0;
+  -webkit-filter: brightness(1);
+}
+
+/* IE8 */
+
+.ie8 a.btn {
+  zoom: 1;
+  margin-top: -5px;
+  padding: .6em 1em;
+  border-bottom: 5px solid #dc5f67;
+}
+
+.ie8 a.btn.bnr {
+  padding: 0;
+}
+
+.ie8 .btn.inline {
+  padding: .3em .3em .3em .4em;
+}
+
+.ie8 .btn.next:after,
+.ie8 .btn.prev:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -.6em;
+  font-size: 120%;
+}
+
+.ie8 .btn.next:after {
+  content: "›";
+  right: 1em;
+}
+
+.ie8 .btn.prev:before {
+  content: "‹";
+  left: 1em;
+}
+
+.ie8 .btn.bnr.cafe:hover img {
+  filter: alpha(opacity=0);
+}

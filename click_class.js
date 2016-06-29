@@ -14,7 +14,7 @@ function tab_change(tab1,tab2,tab3){
  	var	$secondTab = $("tab2");
 	var $thirdTab = $("tab3");
 
-			$$firstTab.on('click',function() {
+			$firstTab.on('click',function() {
 				$firstTab.addClass("is-show");
 				$secondTab.removeClass("is-show");
 				$thirdTab.removeClass("is-show");

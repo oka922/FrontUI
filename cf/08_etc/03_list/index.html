@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<!--[if IE 8]> <html lang="ja" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>順序付きリストの番号部分を、柔軟にデザインできるようにする。</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div class="section">
+  <p>目次や、手順の紹介、ランキングの表示など、連番を表示させたい時に重宝する、汎用的なスタイルを紹介する。</p>
+  <ol class="numbering">
+    <li>li要素を、
+       <ol>
+        <li>その中のli要素を、
+        <ol>
+          <li>その中の中のli要素を、</li>
+        </ol>
+        </li>
+      </ol>
+    </li>
+   <li>counter-incrementプロパティで数えて、</li>
+    <li>その数字をcounter()関数を使って、
+      <ol>
+        <li>2階層め以降にも、親階層の数字を</li>
+        <li>付与する場合にはcounters()関数を使って、
+          <ol>
+            <li>例えばここでは「content: counters(number, "-")」という風に記述して、</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>:before疑似要素で表示させている。</li>
+  </ol>
+  
+  <h2 class="label">CSS</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.numbering,</code></li>
+      <li><code>.numbering ol {</code></li>
+      <li><code>  list-style: none;</code></li>
+      <li><code>  counter-reset: number;</code></li>
+      <li><code>  padding-left: 0;</code></li>
+      <li><code>}</code></li>
+      <li><code>.numbering li {</code></li>
+      <li><code>  counter-increment: number;</code></li>
+      <li><code>}</code></li>
+      <li><code>.numbering li:before {</code></li>
+      <li><code>  content: counters(number, "-");</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>.numbering li:before {</code></li>
+      <li><code>  display: inline-block;</code></li>
+      <li><code>  min-width: .5em;</code></li>
+      <li><code>  height: 1em;</code></li>
+      <li><code>  margin-right: .5em;</code></li>
+      <li><code>  padding: .25em .5em;</code></li>
+      <li><code>  border-radius: 1em;</code></li>
+      <li><code>  color: white;</code></li>
+      <li><code>  background-color: #593869;</code></li>
+      <li><code>  line-height: 1;</code></li>
+      <li><code>  text-align: center;</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* PowerTip Plugin */
+#powerTip {/*吹き出し本体部分設定*/
+	cursor: default;
+	background-color: #333;/*吹き出し本体部分背景色*/
+	border-radius: 6px;
+	color: #fff;
+	display: none;
+	padding: 10px;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 2147483647;
+}
+#powerTip:before {
+	content: "";
+	position: absolute;
+}
+#powerTip.n:before, #powerTip.s:before {
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	left: 50%;
+	margin-left: -5px;
+}
+#powerTip.e:before, #powerTip.w:before {
+	border-bottom: 5px solid transparent;
+	border-top: 5px solid transparent;
+	margin-top: -5px;
+	top: 50%;
+}
+#powerTip.n:before {
+	border-top: 10px solid #333; /*（北）吹き出し先端部分背景色*/  
+	bottom: -10px;
+}
+#powerTip.e:before {
+	border-right: 10px solid #333; /*（東）吹き出し先端部分背景色*/
+	left: -10px;
+}
+#powerTip.s:before {
+	border-bottom: 10px solid #333; /*（南）吹き出し先端部分背景色*/
+	top: -10px;
+}
+#powerTip.w:before {
+	border-left: 10px solid #333; /*（西）吹き出し先端部分背景色*/
+	right: -10px;
+}
+#powerTip.ne:before, #powerTip.se:before {
+	border-right: 10px solid transparent;
+	border-left: 0;
+	left: 10px;
+}
+#powerTip.nw:before, #powerTip.sw:before {
+	border-left: 10px solid transparent;
+	border-right: 0;
+	right: 10px;
+}
+#powerTip.ne:before {
+	border-top: 10px solid #333; /*（北東）吹き出し先端部分背景色*/
+	bottom: -10px;
+}
+#powerTip.nw:before {
+	border-top: 10px solid #333; /*（北西）吹き出し先端部分背景色*/
+	bottom: -10px;
+}
+#powerTip.se:before {
+	border-bottom: 10px solid #333; /*（南東）吹き出し先端部分背景色*/
+	top: -10px;
+}
+#powerTip.sw:before {
+	border-bottom: 10px solid #333; /*（南西）吹き出し先端部分背景色*/
+	top: -10px;
+}
+#powerTip.nw-alt:before, #powerTip.ne-alt:before {
+	border-top: 10px solid #f00;
+	bottom: -10px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	left: 10px;
+}
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: 10px solid #333;
+	bottom: -10px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	left: 10px;
+}
+#powerTip.ne-alt:before {
+	left: auto;
+	right: 10px;
+}
+#powerTip.sw-alt:before, #powerTip.se-alt:before {
+	border-top: none;
+	border-bottom: 10px solid #333;
+	bottom: auto;
+	top: -10px;
+}
+#powerTip.se-alt:before {
+	left: auto;
+	right: 10px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="ja" class="lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>オープニングにパタパタと現れるかわいめエフェクト。</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div id="contents">
+  <h1 class="txtEffect">オープニングにパタパタと現れるかわいめエフェクト。</h1>
+  <p>class属性に「<code>txtEffect</code>」とつけた要素で包めば、<code class="txtEffect">&lt;code class="txtEffect"&gt;ここもパタパタします&lt;/code&gt;</code>という感じにパタパタします。</p>
+</div>
+  
+<div class="section">
+  <h2 class="label">JavaScript</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>&lt;script src="jquery.min.js"&gt;&lt;/script&gt;</code></li>
+      <li><code>&lt;script&gt;</code></li>
+      <li><code>$(function() {</code></li>
+      <li><code>  var splitText = $(".txtEffect");</code></li>
+      <li><code>  splitText.contents().each(function() {</code></li>
+      <li><code>    var t = $(this);</code></li>
+      <li><code>    t.replaceWith(t.text().replace(/(\S)/g, "&lt;span class='c' data-char='$&'&gt;$&&lt;/span&gt;"));</code></li>
+      <li><code>  });</code></li>
+      <li><code>});</code></li>
+      <li><code>&lt;/script&gt;</code></li>
+    </ol>
+  </pre>
+
+  <h2 class="label">CSS<span>（別途ベンダープレフィックスが必要）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.txtEffect .c {</code></li>
+      <li><code>  display: inline-block;</code></li>
+      <li><code>  position: relative;</code></li>
+      <li><code>  color: transparent;</code></li>
+      <li><code>  perspective: 500px;</code></li>
+      <li><code>  perspective-origin: 0 50%;</code></li>
+      <li><code>  animation: fade .6s;</code></li>
+      <li><code>  animation-fill-mode: backwards;</code></li>
+      <li><code>}</code></li>
+      <li><code>@keyframes fade {</code></li>
+      <li><code>  0% { opacity: 0; }</code></li>
+      <li><code>  100% { opacity: 1; }</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>.txtEffect .c::before {</code></li>
+      <li><code>  color: rgba(0,0,0,.1);</code></li>
+      <li><code>  transform: skewY(15deg);</code></li>
+      <li><code>  animation: shadow .6s;</code></li>
+      <li><code>}</code></li>
+      <li><code>@keyframes shadow {</code></li>
+      <li><code>  0% { transform: skewY(45deg); }</code></li>
+      <li><code>  100% { transform: skewY(15deg); }</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>.txtEffect .c::after {</code></li>
+      <li><code>  color: #fff;</code></li>
+      <li><code>  transform: rotateY(-30deg);</code></li>
+      <li><code>  animation: appear .6s;</code></li>
+      <li><code>}</code></li>
+      <li><code>@keyframes appear {</code></li>
+      <li><code>  0% { transform: rotateY(-90deg); }</code></li>
+      <li><code>  100% { transform: rotateY(-30deg); }</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>.txtEffect .c::before,</code></li>
+      <li><code>.txtEffect .c::after {</code></li>
+      <li><code>  display: inline-block;</code></li>
+      <li><code>  content: attr(data-char);</code></li>
+      <li><code>  position: absolute;</code></li>
+      <li><code>  top: 0;</code></li>
+      <li><code>  left: 0;</code></li>
+      <li><code>  transform-origin: 0 50%;</code></li>
+      <li><code>  transition: transform .3s;</code></li>
+      <li><code>  animation-fill-mode: backwards;</code></li>
+      <li><code>  animation-timing-function: cubic-bezier(.8,.18,.38,1.28);</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+<script src="jquery.min.js"></script>
+<script>
+$(function() {
+  var splitText = $(".txtEffect");
+  splitText.contents().each(function() {
+    var t = $(this);
+    console.log(t);
+    t.replaceWith(t.text().replace(/(\S)/g, "<span class='c' data-char='$&'>$&</span>"));
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Alegreya);
+
+/*---------------------
+	 reset
+----------------------- */
+html{font-family: 'Alegreya',serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background-color:transparent}body{line-height:1}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background-color:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted black;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid#cccccc;margin:1em 0;padding:0}input,select{vertical-align:middle}input[type="search"]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+
+/*---------------------
+	 sample
+----------------------- */
+.container {
+  margin: 0 0 50px;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+#header {
+  position: relative;
+  min-height: 450px;
+  background: url(../img/1.jpg) no-repeat fixed;
+  background-size: cover;
+  margin: 0 0 50px;
+  text-shadow: 1px 1px 2px #666;
+}
+
+#header h1 {
+  font-size: 50px;
+  color: #fff;
+  padding: 100px 0 30px;
+  text-align: center;
+}
+
+#header p {
+  color: #fff;
+  font-size: 120%;
+}
+
+.head_menu {
+  width: 800px;
+  margin: 0 auto 50px;
+  overflow: hidden;
+}
+
+.head_menu li {
+  list-style: none;
+  width: 133px;
+  text-align: center;
+  float: left;
+}
+
+.head_menu li a {
+  display: block;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.content {
+  width: 600px;
+  margin: 0 auto 50px;
+}
+
+.content p {
+  font-size: 110%;
+}
+
+/*---------------------
+    スライドダウンする
+    メニュー
+----------------------- */
+#slide_menu {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px #ccc;
+  
+  /* スライドに必要な指定以下2行 */
+  position: fixed;
+  top: -70px;
+}
+
+#slide_menu ul {
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#slide_menu ul li {
+  float: left;
+  list-style: none;
+  margin: 17px 0;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #eee;
+}
+
+#slide_menu ul li:first-child {
+  border-left: none;
+}
+
+#slide_menu ul li:last-child {
+  border-right: none;
+}
+
+#slide_menu ul li a {
+  display: block;
+  width: 130px;
+  padding: 10px 0;
+  color: #333;
+  font-size: 16px;
+}

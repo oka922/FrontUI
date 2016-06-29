@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>=^.^=</title>
+<style>
+body{
+  font-family: "\30D2\30E9\30AE\30CE\89D2\30B4\20\50\72\6F\20\57\33", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", Meiryo, "\FF2D\FF33\20\FF30\30B4\30B7\30C3\30AF", sans-serif;
+}
+.container{
+  padding: 20px;
+  margin: 0 auto;
+  background: #E9D6C7;
+}
+
+.swipeable{
+  overflow: hidden;
+}
+
+.swipeable__viewport {
+  width:200px;
+  height:200px;
+  margin:0 auto;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  position:relative;
+}
+.swipeable__viewport,
+.swipeable__viewport * {
+  -webkit-touch-callout: none;
+  touch-callout: none;
+}
+.swipeable__items {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+}
+.swipeable__item {
+  float:left;
+  height:100%;
+  width:200px;
+  text-align:center;
+  margin:0 0 0 20px;
+}
+.swipeable__item:first-child {
+  margin-left:0;
+}
+
+.swipeable__pointers {
+  text-align: center;
+}
+
+.swipeable__pointers span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+
+.swipeable__pointers span.swipeable__current {
+  background: #FC0;
+}
+
+.swipeable__next,
+.swipeable__prev{
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+  padding: 5px;
+  background: #FFF;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="eveeve.js"></script>
+<script src="jquery.touchdragh.js"></script>
+<script>
+$( function () {
+
+  $( '.swipeable' ).each( function () {
+
+    var instance;
+    var $el = $( '.swipeable' );
+    var $viewport = $el.find( '.swipeable__viewport' );
+    var $item     = $viewport.find( '.swipeable__item' );
+    var $pointer  = $el.find( '.swipeable__pointers span' );
+    var $prev     = $el.find( '.swipeable__prev' );
+    var $next     = $el.find( '.swipeable__next' );
+    
+    $viewport.touchdraghsteppy( {
+
+      inner: '.swipeable__items',
+      item:  '.swipeable__item',
+      stepwidth: $item.width(),
+      widthbetween: 20, // item間の余白(マージン)
+      beforefirstrefresh: function( ins ) {
+
+        instance = ins;
+        instance.on( 'indexchange', function( data ) {
+
+          $pointer.filter( '.swipeable__current' ).removeClass( 'swipeable__current' );
+          $pointer.eq( data.index ).addClass( 'swipeable__current' );
+
+        } );
+
+      }
+
+    } );
+
+    $prev.bind( 'click', function() { instance.prev( true ); } );
+    $next.bind( 'click', function() { instance.next( true ); } );
+
+  } );
+} );
+</script>
+</head>
+<body>
+
+<div class="container">
+
+<div class="swipeable">
+
+  <div class="swipeable__viewport">
+    <div class="swipeable__items">
+      <div class="swipeable__item"><img src="img_01.png" alt="" width="200" height="200"></div>
+      <div class="swipeable__item"><img src="img_02.png" alt="" width="200" height="200"></div>
+      <div class="swipeable__item">テキストを入れられるし、<a href="http://www.pxgrid.com/">リンクも動く</a></div>
+      <div class="swipeable__item"><img src="img_03.png" alt="" width="200" height="200"></div>
+      <div class="swipeable__item"><img src="img_04.png" alt="" width="200" height="200"></div>
+    </div>
+  </div>
+
+  <div class="swipeable__pointers">
+    <span class="swipeable__current"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="swipeable__prev">前へ</div>
+  <div class="swipeable__next">次へ</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

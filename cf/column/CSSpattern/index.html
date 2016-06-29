@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="ja" class="lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>画像じゃなくてもいろいろできちゃう、CSSで作る背景パターン。</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div class="bgPattern tartan">
+  <h1 class="centering">タータン</h1>
+</div>
+
+<div class="bgPattern nanako">
+  <h1 class="centering">
+    <ruby>
+      <rb>魚子</rb>
+      <rp>（</rp><rt>ななこ</rt><rp>）</rp>
+    </ruby>
+  </h1>
+</div>
+
+<div class="bgPattern houndstooth">
+  <h1 class="centering">
+    <ruby>
+      <rb>千鳥</rb>
+      <rp>（</rp><rt>ちどり</rt><rp>）</rp>
+    </ruby>
+  </h1>
+</div>
+
+<div class="bgPattern argyll">
+  <h1 class="centering">アーガイル</h1>
+</div>
+
+<div class="section">
+  <h2 class="label">タータン</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.tartan {</code></li>
+      <li><code>  background-color: #eee;</code></li>
+      <li><code>  background-size: 100px 100px;</code></li>
+      <li><code>  background-position: 0 0;</code></li>
+      <li><code>  background-image:</code></li>
+      <li><code>  /* 赤線 */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to right,</code></li>
+      <li><code>    transparent 36%, rgba(229,98,98,.6) 36%,</code></li>
+      <li><code>    rgba(229,98,98,.6) 38%, transparent 38%,</code></li>
+      <li><code>    transparent 62%, rgba(229,98,98,.6) 62%,</code></li>
+      <li><code>    rgba(229,98,98,.6) 64%, transparent 64%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to bottom,</code></li>
+      <li><code>    transparent 35%, rgba(229,98,98,.6) 35%,</code></li>
+      <li><code>    rgba(229,98,98,.6) 37%, transparent 37%,</code></li>
+      <li><code>    transparent 63%, rgba(229,98,98,.6) 63%,</code></li>
+      <li><code>    rgba(229,98,98,.6) 65%, transparent 65%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  /* 緑帯 */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to right,</code></li>
+      <li><code>    transparent 20%, rgba(78,129,44,.5) 20%,</code></li>
+      <li><code>    rgba(78,129,44,.4) 22%, transparent 22%,</code></li>
+      <li><code>    transparent 25%, rgba(78,129,44,.5) 25%,</code></li>
+      <li><code>    rgba(78,129,44,.5) 48.5%, transparent 48.5%,</code></li>
+      <li><code>    transparent 51.5%, rgba(78,129,44,.5) 51.5%,</code></li>
+      <li><code>    rgba(78,129,44,.5) 75%, transparent 75%,</code></li>
+      <li><code>    transparent 78%, rgba(78,129,44,.4) 78%,</code></li>
+      <li><code>    rgba(78,129,44,.5) 80%, transparent 80%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to bottom,</code></li>
+      <li><code>    transparent 20%, rgba(78,129,44,.5) 20%,</code></li>
+      <li><code>    rgba(78,129,44,.4) 22%, transparent 22%,</code></li>
+      <li><code>    transparent 25%, rgba(78,129,44,.5) 25%,</code></li>
+      <li><code>    rgba(78,129,44,.5) 48.5%, transparent 48.5%,</code></li>
+      <li><code>    transparent 51.5%, rgba(78,129,44,.5) 51.5%,</code></li>
+      <li><code>    rgba(78,129,44,.5) 75%, transparent 75%,</code></li>
+      <li><code>    transparent 78%, rgba(78,129,44,.4) 78%,</code></li>
+      <li><code>    rgba(78,129,44,.5) 80%, transparent 80%</code></li>
+      <li><code>  );</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">魚子<span>（ななこ）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.nanako {</code></li>
+      <li><code>  background-color: #eee;</code></li>
+      <li><code>  background-size: 50px 50px, 50px 50px, 25px 25px;</code></li>
+      <li><code>  background-position: 0 0, 25px 25px;</code></li>
+      <li><code>  background-image:</code></li>
+      <li><code>  /* 右下暗グレー → 透明 → 左上明グレー */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    -45deg,</code></li>
+      <li><code>    whitesmoke 25%, transparent 25%,</code></li>
+      <li><code>    transparent 75%, silver 75%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    -45deg,</code></li>
+      <li><code>    whitesmoke 25%, transparent 25%,</code></li>
+      <li><code>    transparent 75%, silver 75%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  /* 中間グレーの斜め割り */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    45deg,</code></li>
+      <li><code>    lightgrey 50%, gainsboro 50%</code></li>
+      <li><code>  );</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">千鳥<span>（ちどり）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.houndstooth {</code></li>
+      <li><code>  background-color: #eee;</code></li>
+      <li><code>  background-size: 30px 30px;</code></li>
+      <li><code>  background-position: 0 0, 15px 15px, 0 0;</code></li>
+      <li><code>  background-image:</code></li>
+      <li><code>  /* 重ねる格子（半分） */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    45deg,</code></li>
+      <li><code>    #eee 25%, transparent 25%,</code></li>
+      <li><code>    transparent 75%, #333 75%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  /* 重ねる格子（半分） */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    45deg,</code></li>
+      <li><code>    #333 25%, transparent 25%,</code></li>
+      <li><code>    transparent 75%, #eee 75%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  /* 下地のストライプ */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    -45deg,</code></li>
+      <li><code>    #333 12.5%, #eee 12.5%,</code></li>
+      <li><code>    #eee 25%, #333 25%,</code></li>
+      <li><code>    #333 37.5%, #eee 37.5%,</code></li>
+      <li><code>    #eee 62.5%, #333 62.5%,</code></li>
+      <li><code>    #333 75%, #eee 75%,</code></li>
+      <li><code>    #eee 87.5%, #333 87.5%</code></li>
+      <li><code>  );</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">アーガイル</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.argyll {</code></li>
+      <li><code>  background-color: #eee;</code></li>
+      <li><code>  background-size: 30px 60px, 30px 60px, 30px 60px, 30px 60px, 60px 120px;</code></li>
+      <li><code>  background-position: 15px 0, 15px 0, 15px 0, 15px 0, 0 0;</code></li>
+      <li><code>  background-image:</code></li>
+      <li><code>  /* 細い線 */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to right top,</code></li>
+      <li><code>    transparent 49%, rgba(255,255,255,.5) 49%,</code></li>
+      <li><code>    rgba(255,255,255,.5) 51%, transparent 51%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to left top,</code></li>
+      <li><code>    transparent 49%, rgba(255,255,255,.5) 49%,</code></li>
+      <li><code>    rgba(255,255,255,.5) 51%, transparent 51%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  /* 紺 */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to right top,</code></li>
+      <li><code>    #115572 24%, transparent 26%,</code></li>
+      <li><code>    transparent 74%, #115572 76%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to left top,</code></li>
+      <li><code>    #115572 24%, transparent 26%,</code></li>
+      <li><code>    transparent 74%, #115572 76%</code></li>
+      <li><code>  ),</code></li>
+      <li><code>  /* 赤と水のストライプ */</code></li>
+      <li><code>  linear-gradient(</code></li>
+      <li><code>    to right top,</code></li>
+      <li><code>    #bed3db 25%, #cc2828 25%,</code></li>
+      <li><code>    #cc2828 50%, #bed3db 50%,</code></li>
+      <li><code>    #bed3db 75%, #cc2828 75%</code></li>
+      <li><code>  );</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

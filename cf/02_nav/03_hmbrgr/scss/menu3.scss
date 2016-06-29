@@ -1,0 +1,116 @@
+@import "compass/css3";
+
+html, body{
+  width: 100%;
+  height: 100%;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+
+  .menu-icon{
+      span{
+        background: #ffffff;
+      }
+    }
+  &.active{
+
+
+
+    .main-container {
+      @include translate(200px,0);
+    }
+
+    nav{
+      .menu-list-container{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
+.main-container{
+  @include transition(all .4s ease-in);
+
+
+  width: 100%;
+  height: 100%;
+  background: url('../images/bg3.jpg') no-repeat center center fixed #ffffff;
+
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+  .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .text{
+      font-size: 32px;
+      letter-spacing: 3px;
+      color: #ffffff;
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      @include translate(-50%, -50%);
+    }
+  }
+}
+
+.menu-icon-container{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  z-index: 9999;
+}
+
+nav{
+  color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+
+  z-index: -1;
+  overflow: hidden;
+  background: #333333;
+
+
+  .menu-list-container{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    opacity: 0;
+
+    @include transition(opacity .3s);
+
+    ul{
+
+      width: 100%;
+
+      li{
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 20px;
+
+        padding-left: 20px;
+
+      }
+    }
+  }
+}

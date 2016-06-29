@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Effect techniques for SVG icon</title>
+	<link rel="stylesheet" href="svg.css">
+	<link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Open+Sans:300,400">
+</head>
+<body>
+	<h1 class="text-center">Effect techniques for SVG icon</h1>
+	<p class="text-center"><img src="svg/eyeglasses.svg"></p>
+
+	<!-- SVG Code -->
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute;">
+			<path id="rocket" d="M58.84,21.01H40.76c2.119-9.029,5.381-14.822,9.041-14.822S56.723,11.98,58.84,21.01z M47.518,72.463
+				c0,0-7.672,10.008,1.5,21.35c0,0-4.148-9.445,0.543-12.697c0,0,3.941-1.314,4.254,2.689c0,0,3.252-6.342,0-11.346L47.518,72.463z
+				 M68.221,55.502c-1.9-3.258-4.201-5.973-6.582-7.951c0.145-2.031,0.223-4.129,0.223-6.275c0-2.299-0.096-4.531-0.262-6.693
+				c-0.494,0.477-1.164,0.771-1.906,0.771c-1.52,0-2.752-1.232-2.752-2.752V29.6c0-1.52,1.232-2.752,2.752-2.752
+				c0.34,0,0.666,0.064,0.967,0.178c-0.281-1.578-0.605-3.092-0.971-4.514H40.35c-1.365,5.303-2.172,11.771-2.172,18.764
+				c0,2.137,0.078,4.223,0.221,6.246c-2.395,1.98-4.709,4.707-6.619,7.98c-5.084,8.711-5.385,18.004-0.67,20.754l9.309-15.953
+				c1.186,4.502,3.131,8.135,5.107,10.492h8.992c1.969-2.35,3.906-5.965,5.092-10.447l9.283,15.908
+				C73.605,73.506,73.305,64.213,68.221,55.502z"/>
+
+		<!-- Define Gradations -->
+			<defs>
+			<!-- Green -->
+				<linearGradient id="green-gradient" x1="0" x2="0" y1="0" y2="1">
+				    <stop offset="0%" stop-color="#B4EC51" />
+		        	<stop offset="100%" stop-color="#429321" />
+				</linearGradient>
+
+			<!-- Orange -->
+				<linearGradient id="orange-gradient" x1="0" x2="0" y1="0" y2="1">
+				    <stop offset="0%" stop-color="#FAD961" />
+		        	<stop offset="100%" stop-color="#F76B1C" />
+				</linearGradient>
+
+			<!-- Red -->
+				<linearGradient id="red-gradient" x1="0" x2="0" y1="0" y2="1">
+				    <stop offset="0%" stop-color="#F5515F" />
+		        	<stop offset="100%" stop-color="#9F041B" />
+				</linearGradient>
+
+			<!-- Blue -->
+				<linearGradient id="blue-gradient" x1="0" x2="0" y1="0" y2="1">
+				    <stop offset="0%" stop-color="#53A0FD" />
+		        	<stop offset="100%" stop-color="#3023AE" />
+				</linearGradient>
+
+			<!-- Purple -->
+				<linearGradient id="purple-gradient" x1="0" x2="0" y1="0" y2="1">
+				    <stop offset="0%" stop-color="#C86DD7" />
+		        	<stop offset="100%" stop-color="#3023AE" />
+				</linearGradient>
+
+			</defs>
+		<!-- End define -->
+
+		<!-- Define Filters -->
+			<!-- Blur -->
+			<filter id="blur">
+			<feOffset dx='0' dy='0' />
+			<feGaussianBlur stdDeviation="1" />
+			</filter>
+
+			<!-- Drop shadow -->
+			<filter id="drop-shadow">
+			    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+			    <feOffset dx="1" dy="1" />
+			    <feMerge>
+			        <feMergeNode />
+			        <feMergeNode in="SourceGraphic" />
+			    </feMerge>
+			 </filter>
+
+			 <!-- Inner shadow -->
+			 <filter id="inner-shadow">
+			 	<feOffset dx='0' dy='0' />
+			    <!-- Shadow blur -->
+			    <feGaussianBlur stdDeviation='2' result='offset-blur' />
+			    <feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse' />
+			 	</feComposite>
+			 	<feFlood flood-color='#000' flood-opacity='.95' result='color' />
+    		 	<feComposite operator='in' in='color' in2='inverse' result='shadow' />
+    		 	<feComposite operator='over' in='shadow' in2='SourceGraphic' />
+    		</filter>
+
+		<!-- End define -->
+			</svg>
+	<!-- End Code -->
+
+	<div class="container text-center">
+
+	<!-- Fill & Outline -->
+		<section>
+		<h2>Fill & Outline</h2>
+			<svg class="icon" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+			<svg class="icon pink" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon outline" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon pink pink-hover" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon outline outline-hover" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+		</section>
+		<!-- End -->
+
+		<!-- Gradation -->
+		<section>
+		<h2>Gradation</h2>			
+			<svg class="icon green" viewBox="0 0 100 100">
+	  			<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon orange" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon red" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon blue" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon purple" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+		</section>
+		<!-- End -->
+
+		<!-- Filters -->
+		<section>
+		<h2>Filters</h2>
+			<svg class="icon flat-blue" viewBox="0 0 100 100">
+				<g filter="url(#blur)">
+  					<use xlink:href="#rocket"></use>
+  				</g>
+			</svg>
+
+			<svg class="icon flat-blue" viewBox="0 0 100 100">
+				<g filter="url(#drop-shadow)">
+  					<use xlink:href="#rocket"></use>
+  				</g>
+			</svg>
+			<svg class="icon flat-blue" viewBox="0 0 100 100">
+				<g filter="url(#inner-shadow)">
+  					<use xlink:href="#rocket"></use>
+  				</g>
+			</svg>
+		</section>
+
+		<!-- Filters CSS -->
+		<section>
+		<h2>Filters(CSS)</h2>
+			<svg class="icon flat-blue filter-blur" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon flat-blue filter-drop-shadow" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+
+			<svg class="icon flat-blue filter-inner-shadow" viewBox="0 0 100 100">
+  				<use xlink:href="#rocket"></use>
+			</svg>
+		</section>
+
+	</div>
+</body>
+</html>

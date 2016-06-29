@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* !tooltip.css
+---------------------------------------------------------- */
+.ul_sample01 {
+}
+	.ul_sample01 li {
+		margin: 0 auto 20px;
+		padding: 10px;
+		border: 1px solid #666;
+		border-radius: 10px;
+		width: 100px;
+		text-align: center;
+	}

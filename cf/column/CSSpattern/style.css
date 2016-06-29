@@ -1,0 +1,256 @@
+/* snippet/BgPattern */
+
+body {
+  font-family: "Yu Gothic", YuGothic, sans-serif;
+}
+
+pre, code {
+  font-family: Consolas, Courier, 'Andale Mono', monospace;
+}
+
+/* シンタックスリスト */
+
+.label {
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+.label span {
+  font-size: 80%;
+}
+
+.synthax {
+  background-color: #593869;
+  font-size: 80%;
+  text-align: left;
+  white-space: normal;
+  border-radius: 3px;
+}
+
+.synthax ol {
+  padding: 0 0 0 3.8em;
+}
+
+.synthax ol li {
+  margin: 0;
+  padding: .3em .5em;
+  color: white;
+  background-color: white;
+  line-height: 1.2;
+}
+
+.synthax ol li:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.synthax ol li code {
+  margin: 0;
+  color: #333;
+  white-space: pre;
+}
+
+/* センタリング */
+
+.centering {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.centering span {
+  font-size: .3em;
+}
+
+/* contents */
+
+html,
+body,
+#wrapper {
+  height: 100%;
+}
+
+#wrapper {
+  position: relative;
+}
+
+.bgPattern,
+.section {
+  position: relative;
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.bgPattern {
+  float: left;
+  width: 25%;
+  margin-bottom: 20px;
+  background-attachment: fixed;
+}
+
+.section {
+  width: 80%;
+  padding: 50px;
+}
+
+/* bgPattern */
+
+.tartan {
+  background-color: #eee;
+  background-size: 100px 100px;
+  background-position: 0 0;
+  background-image:
+  /* 赤線 */
+  linear-gradient(
+    to right,
+    transparent 36%, rgba(229,98,98,.6) 36%,
+    rgba(229,98,98,.6) 38%, transparent 38%,
+    transparent 62%, rgba(229,98,98,.6) 62%,
+    rgba(229,98,98,.6) 64%, transparent 64%
+  ),
+  linear-gradient(
+    to bottom,
+    transparent 35%, rgba(229,98,98,.6) 35%,
+    rgba(229,98,98,.6) 37%, transparent 37%,
+    transparent 63%, rgba(229,98,98,.6) 63%,
+    rgba(229,98,98,.6) 65%, transparent 65%
+  ),
+  /* 緑帯 */
+  linear-gradient(
+    to right,
+    transparent 20%, rgba(78,129,44,.5) 20%,
+    rgba(78,129,44,.4) 22%, transparent 22%,
+    transparent 25%, rgba(78,129,44,.5) 25%,
+    rgba(78,129,44,.5) 48.5%, transparent 48.5%,
+    transparent 51.5%, rgba(78,129,44,.5) 51.5%,
+    rgba(78,129,44,.5) 75%, transparent 75%,
+    transparent 78%, rgba(78,129,44,.4) 78%,
+    rgba(78,129,44,.5) 80%, transparent 80%
+  ),
+  linear-gradient(
+    to bottom,
+    transparent 20%, rgba(78,129,44,.5) 20%,
+    rgba(78,129,44,.4) 22%, transparent 22%,
+    transparent 25%, rgba(78,129,44,.5) 25%,
+    rgba(78,129,44,.5) 48.5%, transparent 48.5%,
+    transparent 51.5%, rgba(78,129,44,.5) 51.5%,
+    rgba(78,129,44,.5) 75%, transparent 75%,
+    transparent 78%, rgba(78,129,44,.4) 78%,
+    rgba(78,129,44,.5) 80%, transparent 80%
+  );
+}
+
+.nanako {
+  background-color: #eee;
+  background-size: 50px 50px, 50px 50px, 25px 25px;
+  background-position: 0 0, 25px 25px;
+  background-image:
+  /* 右下暗グレー → 透明 → 左上明グレー */
+  linear-gradient(
+    -45deg,
+    whitesmoke 25%, transparent 25%,
+    transparent 75%, silver 75%
+  ),
+  linear-gradient(
+    -45deg,
+    whitesmoke 25%, transparent 25%,
+    transparent 75%, silver 75%
+  ),
+  /* 中間グレーの斜め割り */
+  linear-gradient(
+    45deg,
+    lightgrey 50%, gainsboro 50%
+  );
+}
+
+.houndstooth {
+  background-color: #eee;
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px, 0 0;
+  background-image:
+  /* 重ねる格子（半分） */
+  linear-gradient(
+    45deg,
+    #eee 25%, transparent 25%,
+    transparent 75%, #333 75%
+  ),
+  /* 重ねる格子（半分） */
+  linear-gradient(
+    45deg,
+    #333 25%, transparent 25%,
+    transparent 75%, #eee 75%
+  ),
+  /* 下地のストライプ */
+  linear-gradient(
+    -45deg,
+    #333 12.5%, #eee 12.5%,
+    #eee 25%, #333 25%,
+    #333 37.5%, #eee 37.5%,
+    #eee 62.5%, #333 62.5%,
+    #333 75%, #eee 75%,
+    #eee 87.5%, #333 87.5%
+  );
+}
+
+.argyll {
+  background-color: #eee;
+  background-size: 30px 60px, 30px 60px, 30px 60px, 30px 60px, 60px 120px;
+  background-position: 15px 0, 15px 0, 15px 0, 15px 0, 0 0;
+  background-image:
+  /* 細い線 */
+  linear-gradient(
+    to right top,
+    transparent 49%, rgba(255,255,255,.5) 49%,
+    rgba(255,255,255,.5) 51%, transparent 51%
+  ),
+  linear-gradient(
+    to left top,
+    transparent 49%, rgba(255,255,255,.5) 49%,
+    rgba(255,255,255,.5) 51%, transparent 51%
+  ),
+  /* 紺 */
+  linear-gradient(
+    to right top,
+    #115572 24%, transparent 26%,
+    transparent 74%, #115572 76%
+  ),
+  linear-gradient(
+    to left top,
+    #115572 24%, transparent 26%,
+    transparent 74%, #115572 76%
+  ),
+  /* 赤と水のストライプ */
+  linear-gradient(
+    to right top,
+    #bed3db 25%, #cc2828 25%,
+    #cc2828 50%, #bed3db 50%,
+    #bed3db 75%, #cc2828 75%
+  );
+}
+
+/* IE9以下は画像にしましょう:) */
+
+.lte-ie9 .tartan {
+  background-image: url(bg_tartan.png);
+  background-size: 100px 100px;
+}
+
+.lte-ie9 .nanako {
+  background-image: url(bg_nanako.png);
+  background-size: 60px 60px;
+}
+
+.lte-ie9 .houndstooth {
+  background-image: url(bg_houndstooth.png);
+  background-size: 40px 40px;
+}
+
+.lte-ie9 .argyll {
+  background-image: url(bg_argyll.png);
+  background-size: 120px 120px;
+}

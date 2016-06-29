@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-4s8wii");
+  src: url("../fonts/icomoon.eot?#iefix-4s8wii") format("embedded-opentype"), url("../fonts/icomoon.woff?-4s8wii") format("woff"), url("../fonts/icomoon.ttf?-4s8wii") format("truetype"), url("../fonts/icomoon.svg?-4s8wii#icomoon") format("svg");
+}
+/*---------------------
+	 reset
+----------------------- */
+html{font-family:'Open Sans',sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;outline:0;border:0;background-color:transparent;vertical-align:baseline;font-size:100%;}body{line-height:1;}article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block;}nav ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}a{margin:0;padding:0;border:0;background-color:transparent;vertical-align:baseline;font-size:100%;}ins{background-color:#ff9;color:#000;text-decoration:none;}mark{background-color:#ff9;color:#000;font-weight:bold;font-style:italic;}del{text-decoration:line-through;}abbr[title],dfn[title]{border-bottom:1px dotted black;cursor:help;}table{border-spacing:0;border-collapse:collapse;}hr{display:block;margin:1em 0;padding:0;height:1px;border:0;border-top:1px solid#cccccc;}input,select{vertical-align:middle;}input[type="search"]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+
+/*---------------------
+	 sample
+----------------------- */
+.container {
+  width: 100%;
+}
+
+.header {
+  margin: 0 0 70px;
+  height: 230px;
+  background: #efdd63;
+}
+
+.header h1 {
+  padding: 90px 0 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: -1px -1px 0 #d6bd16;
+  font-size: 50px;
+}
+
+.content h2 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.tooltip_area {
+  margin: 0 auto;
+  width: 340px;
+}
+
+.footer {
+  clear: both;
+  padding: 60px 0;
+  text-align: center;
+}
+
+/*---------------------
+	 tooltip共通
+----------------------- */
+.tooltip {
+  position: relative;
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.tooltip a {
+  display: block;
+  width: 100px;
+  height: 60px;
+  color: #88c8de;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #38a3c8;
+  font-size: 60px;
+}
+
+.tooltip a:hover {
+  color: #38a3c8;
+}
+
+/*--ツールチップ本体部分--*/
+
+.tooltip > span {
+  padding: 5px;
+  width: 150px;
+  height: 50px;
+  background: #666;
+  box-shadow: 0 0 8px #ccc;
+  color: #fff;
+  font-size: 1em;
+  line-height: 50px;
+    
+  /*以下5行ツールチップ表示に必要。始めは非表示に。*/
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/*--ツールチップ吹き出し三角部分--*/
+
+.tooltip > span:after {
+  position: absolute;
+  border-width: 15px;
+  border-style: solid;
+  /*↓ここではひとまず全ての三角を透明に。150行目以降に三角の表示設定*/
+  border-color: transparent;
+  content: "";
+}
+
+/*--マウスオーバー時アニメーション表示--*/
+
+.tooltip:hover > span {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+/*---------------------
+	 icon
+----------------------- */
+[class^="icon-"], [class*=" icon-"] {
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'icomoon';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-googleplus:before {
+  content: "\e600";
+}
+
+.icon-facebook:before {
+  content: "\e601";
+}
+
+.icon-instagram:before {
+  content: "\e602";
+}
+
+.icon-twitter:before {
+  content: "\e603";
+}
+
+/*---------------------
+	 tooltip上方向表示
+----------------------- */
+.top > span {
+  top: -60px;
+  left: 0;
+}
+
+.top > span:after {
+  top: 60px;
+  left: 65px;
+  border-top-color: #666;
+}
+
+/*---------------------
+	 tooltip右方向表示
+----------------------- */
+.right > span {
+  top: 30px;
+  left: 130px;
+}
+
+.right > span:after {
+  top: 15px;
+  left: -30px;
+  border-right-color: #666;
+}
+
+/*---------------------
+	 tooltip上方向表示
+----------------------- */
+.bottom > span {
+  top: 120px;
+  left: 0;
+}
+
+.bottom > span:after {
+  top: -30px;
+  left: 65px;
+  border-bottom-color: #666;
+}
+
+/*---------------------
+	 tooltip左方向表示
+----------------------- */
+.left > span {
+  top: 30px;
+  left: -145px;
+}
+
+.left > span:after {
+  top: 15px;
+  right: -30px;
+  border-left-color: #666;
+}

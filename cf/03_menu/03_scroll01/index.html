@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>SlideDown FixedMenu</title>
+<link rel="stylesheet" href="css/style.css" media="screen, projection, print">
+  <!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$(function(){
+ 	var headHeight = $('#header').height(),
+        // ↑ ヘッダーIDを指定
+ 		slideMenu = $('#slide_menu'),
+        // ↑ メニューIDを指定
+ 		slideMenuHeight = slideMenu.height();
+ 	
+    $(window).on("scroll", function() {
+        if ($(this).scrollTop() > headHeight+5) {
+            // ↑「+5」の数字でメニューの出現位置の調整が可能
+            // 例）+100 にするとヘッダーの高さ+100pxの位置でメニューが出現
+            slideMenu.stop().animate({'top' : 0 }, 200);
+            // ↑ 文末の「, 200」の数値を変更で出現時アニメーションスピードの変更（ミリ秒単位）
+        } else {
+            slideMenu.stop().animate({'top' : -slideMenuHeight }, 200);
+            // ↑ 文末の「, 200」の数値を変更で非表示時アニメーションスピードの変更（ミリ秒単位）
+        }
+     });
+});
+</script>
+</head>
+<body>
+<div class="container">
+   
+    <!-- スライドするメニューここから -->
+	<nav id="slide_menu">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</nav>
+    <!-- スライドするメニューここまで -->
+
+    <header id="header">
+        <h1>SlideDown FixedMenu</h1>
+            <ul class="head_menu">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+                <li><a href="#">menu6</a></li>
+            </ul>
+
+            <p>Scroll Down<br />
+                ↓<br />
+                ↓<br />
+                ↓<br />
+            </p>
+    </header><!-- fin_header -->
+
+    <div class="content">
+        <p>Kyoto is located in a valley, part of the Yamashiro (or Kyoto) Basin, in the eastern part of the mountainous region known as the Tamba highlands. The Yamashiro Basin is surrounded on three sides by mountains known as Higashiyama, Kitayama and Nishiyama, with a height just above 1,000 metres (3,281 ft) above sea level. This interior positioning results in hot summers and cold winters. There are three rivers in the basin, the Ujigawa to the south, the Katsuragawa to the west, and the Kamogawa to the east. Kyoto City takes up 17.9% of the land in the prefecture with an area of 827.9 square kilometres (319.7 sq mi).</p>
+        <p>The original city was arranged in accordance with traditional Chinese feng shui following the model of the ancient Chinese capital of Chang'an (present-day Xi'an). The Imperial Palace faced south, resulting in Ukyō (the right sector of the capital) being on the west while Sakyō (the left sector) is on the east. The streets in the modern-day wards of Nakagyō, Shimogyō, and Kamigyō-ku still follow a grid pattern.</p>
+        <p>Today, the main business district is located to the south of the old Imperial Palace, with the less-populated northern area retaining a far greener feel. Surrounding areas do not follow the same grid pattern as the center of the city, though streets throughout Kyoto share the distinction of having names.</p>
+        <p>Kyoto sits atop a large natural water table that provides the city with ample freshwater wells. Due to large-scale urbanization, the amount of rain draining into the table is dwindling and wells across the area are drying at an increasing rate.</p></p>
+        <p>Historically Kyoto was the largest city in Japan, later surpassed by Osaka and Edo (Tokyo) towards the end of the 16th century. In the prewar years, Kyoto traded places with Kobe and Nagoya ranking as the 4th and 5th largest city. In 1947, it went back to being 3rd, but its population has gradually declined ever since. By 1960 it had fallen to 5th again, and by 1990 it had fallen to 7th, in 2012 it is now 8th. If current trends continue it could fall to 9th after Kawasaki.</p>
+        <p>Kyoto has a humid subtropical climate (Köppen Cfa), featuring a marked seasonal variation in temperature and precipitation. Summers are hot and humid, though contrarily, winters are relatively cold with occasional snowfall. Kyoto's rain season begins around the middle of June and lasts until the end of July, yielding to a hot and sunny latter half of the summer. Kyoto, along with most of the Pacific coast and central areas of Japan is prone to typhoons during September and October.</p>
+        <p>The directly elected executive mayor in Kyoto as of 2013 is Daisaku Kadokawa, an independent supported by Democratic Party of Japan, Liberal Democratic Party, New Komeito Party, Your Party and Social Democratic Party. The legislative city assembly has 69 elected members.</p>
+        <p>The Kyoto Protocol to the United Nations Framework Convention on Climate Change (UNFCCC) is an international treaty that sets binding obligations on industrialized countries to reduce emissions of greenhouse gases. The Kyoto Protocol was adopted at the third session of the Conference of Parties to the UNFCCC (COP 3) held in Kyoto in 1997.</p>
+        <p>Although ravaged by wars, fires, and earthquakes during its eleven centuries as the imperial capital, Kyoto was spared from much of the destruction of World War II. It was removed from the atomic bomb target list (which it had headed) by the personal intervention of Secretary of War Henry L. Stimson, as Stimson wanted to save this cultural center which he knew from his honeymoon and later diplomatic visits.</p>
+    </div><!--content-->
+
+    <footer class="footer">
+            <p><small>Copyright&copy; Example.All Right Reserved</small></p>
+    </footer><!-- footer -->
+</div><!--container-->
+</body>
+</html>

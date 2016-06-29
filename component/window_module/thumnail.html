@@ -22,7 +22,9 @@
 .window-nav-tab-a {
     float: left;
     margin-left: 10px;
-    border: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
     padding: 5px;
 }
 .is-render{
@@ -83,14 +85,12 @@
 {
         background:#333;
 }
-.column{
-  display: none;
-}
+
 .show{
   visibility: visible !important;
 }
-.is-show{
-  display: block !important;
+.disNon{
+  display: none;
 }
 
 .is-clicked{
@@ -144,13 +144,13 @@
     <div class="is-drag is-resizable window">
       <nav class="window-nav">
         <ul class="window-nav-tab">
-            <li class="window-nav-tab-a id-project is-clicked">project</li>
+            <li class="window-nav-tab-a id-project is-current ">project</li>
             <li class="window-nav-tab-a id-research">research</li>
         </ul>
         <div class="close_btn">×</div>
       </nav>
       <div class="is-render">
-      <div class="column is-show project-c">
+      <div class="column ">
         <img class="img_thumnail" src="img/topimage.jpg" alt=""  >
           <div class="column-s">
             <h2 class="column-s-title"><span class="column-s-title-en">Products Surface ganerate Energy</span><br><span class="column-s-title-jp">太陽電池を用いた曲面表現プロダクトサーフェイスに発電機能を付加する研究</span></h2>
@@ -162,7 +162,7 @@
               In mobile enegy future,renewable energy is interactive and tranceform.we will consider it important to how many times tranceform energy-form during his life-time.</p>
           </div>
       </div>
-      <div class="column research-c">
+      <div class="column disNon">
         <h2 class="column-s-title">電子回路設計</h2><p>単純に直列入力なのにフィルタとか登場するのはアンテナから受信とかを想定しているのか、安定電力電源回路にどうしてバスカップコンデンサがいるのか。
 ・アンプに入る電圧は二点間の電位差（残りの電子を押し出す勢い）だから、アンプに入るのはどこどどこの差になっているのか。
 通電したての動き。スイッチングとコンデンサと直流だから通さないのに、どうやって電源もらっているの、ベースに電荷入らないから、スイッチングするのはICだよね。
@@ -270,8 +270,7 @@
 $(window).load(function(){
 
 
-changeTab(".window-nav-tab-a",".id-project",".id-research",".research-c");
-changeTab(".window-nav-tab-a",".id-research",".id-project",".project-c");
+
 $(".close_btn").on("click",function(){
   $(".window").css("display","none");
 })
@@ -289,15 +288,28 @@ $(".cat_module").mouseleave(function(){
 
 
 
-function changeTab(tab,tab_name_a,tab_name_b,column){
+function changeTab(){
   var tabtn = $(tab);
   var tabpr = $(tab_name_a);
   var tabre = $(tab_name_b);
   tabre.on('click',function() {
-    tabpr.removeClass("is-clicked");
-    tabre.addClass("is-clicked");
-    $(".is-render").find(".column").removeClass("is-show");
-    $(".is-render").find(column).addClass("is-show");
+    tabpr.removeClass("is-current");
+    tabre.addClass("is-current");
+    $(".is-render").find(".column").removeClass("disNon");
+    $(".is-render").find(column).addClass("disNon");
+  });
+
+  $(function(){
+      $(".window-nav .window-nav-tab li").each(function(){
+        $(this).click(function(){
+          console.log(this);
+          var num = $(this).parent(".window-nav-tab").children("li").index(this);
+          $(this).parent('.window-nav-tab').parent('.window-nav').children('.column').addClass('disNon');
+          $(this).parent('.window-nav-tab').parent('.window-nav').children('.column').eq(num).removeClass('disNon');
+          $(this).parent(".window-nav-tab").children('li').removeClass('current');
+          $(this).addClass('is-current');
+        })
+      })
   });
 }
 

@@ -1,0 +1,96 @@
+/* base */
+
+html , body , .container {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    margin:0;
+	padding:0 0;
+}
+body {
+	background: #1C1C1C;
+	font-family:"Lora" , serif;
+	font-size:62.5%;
+	color:#FFF;
+}
+a {
+	text-decoration: none;
+	color:#4169e1;
+}
+h1 {
+	margin:0 auto 60px;
+	font-size:2.4em;
+	font-weight:normal;
+	font-style:italic;
+}
+.text-center {
+	text-align:center;
+}
+
+.container {
+	width:98%;
+	margin:20px auto;
+	padding:20px;
+	font-size:1.6em;
+	text-align: center;
+}
+
+/* Styles */
+
+.diamond {
+	width:750px;
+	list-style-type:none;
+	margin:0 auto;
+	padding:0;
+}
+.diamond li {
+	float:left;
+	margin:0 0 0 51px;
+	padding:0;
+}
+.parts {
+	width:120px;
+	height:120px;
+	background: transparent;
+	color:#FFF;
+	display:block;
+	overflow: hidden;
+	border:3px solid #FFF;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.parts span {
+	display:table-cell;
+	vertical-align: middle;
+	width:130px;
+	height:130px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.diamond > li:nth-child(5){
+	margin-left:140px;
+}
+.diamond > li:nth-child(n+5){
+	margin-top:-38px;
+}
+
+.diamond > li:nth-child(n+6){
+	margin-left:51px;
+}
+
+
+.parts:hover {
+	background-color: #CB1B45;
+	-webkit-transition: all .35s linear;
+	-moz-transition: all .35s linear;
+	-ms-transition: all .35s linear;
+	-o-transition: all .35s linear;
+	transition: all .35s linear;
+}

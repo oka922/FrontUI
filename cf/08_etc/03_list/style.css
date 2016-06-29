@@ -1,0 +1,114 @@
+/* snippet/NumList */
+
+body {
+  font-family: "Yu Gothic", YuGothic, sans-serif;
+}
+
+pre, code {
+  font-family: Consolas, Courier, 'Andale Mono', monospace;
+}
+
+/* シンタックスリスト */
+
+.label {
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+.label span {
+  font-size: 80%;
+}
+
+.synthax {
+  background-color: #593869;
+  font-size: 80%;
+  text-align: left;
+  white-space: normal;
+  border-radius: 3px;
+}
+
+.synthax ol {
+  padding: 0 0 0 3.8em;
+}
+
+.synthax ol li {
+  margin: 0;
+  padding: .3em .5em;
+  color: white;
+  background-color: white;
+  line-height: 1.2;
+}
+
+.synthax ol li:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+
+.synthax ol li code {
+  margin: 0;
+  color: #333;
+  white-space: pre;
+}
+
+/* contents */
+
+.section {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* 番号付きリスト */
+
+.numbering,
+.numbering ol {
+  list-style: none;
+  counter-reset: number;
+  padding-left: 0;
+}
+
+.numbering ol {
+  margin: 0;
+  padding-left: 1em;
+}
+
+.numbering li {
+  counter-increment: number;
+}
+
+.numbering > li {
+  margin-bottom: .3em;
+}
+
+.numbering > li > ol {
+  font-size: 80%;
+  line-height: 1.8;
+}
+
+.numbering li:before {
+  content: counters(number, "-");
+}
+
+.numbering li:before {
+  display: inline-block;
+  min-width: .5em;
+  height: 1em;
+  margin-right: .5em;
+  padding: .25em .5em;
+  border-radius: 1em;
+  color: white;
+  background-color: #593869;
+  line-height: 1;
+  text-align: center;
+}
+
+.numbering li li:before {
+  background-color: #862862;
+}
+
+.numbering li li li:before {
+  background-color: #cdcdcd;
+}
+

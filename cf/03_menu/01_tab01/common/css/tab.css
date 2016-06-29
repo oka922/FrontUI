@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* !tab.css
+---------------------------------------------------------- */
+.disNon {
+	display: none;
+}
+.ul_tab01 {
+	overflow: hidden;
+}
+	.ul_tab01 li {
+		float: left;
+		margin-right: 5px;
+		padding: 2px 0;
+		border-top: 1px solid #f6d3d7;
+		border-right: 1px solid #f6d3d7;
+		border-left: 1px solid #f6d3d7;
+		border-radius: 5px 5px 0 0;
+		width: 25px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.ul_tab01 li.current {
+		background: #f6d3d7;
+	}
+.tabContent01 {
+	padding: 0 10px 10px;
+	text-align: left;
+	background: #f6d3d7;
+}
+	.title01 {
+		padding: 10px 0;
+		font-size: 130%;
+	}
+	.layout01 {
+		border-radius: 5px;
+		padding: 10px;
+		overflow: hidden;
+		background: #fff;
+	}
+		.layout01Img {
+			float: left;
+			margin-right: 10px;
+		}
+		.layout01Text {
+			font-size: 115%;
+		}

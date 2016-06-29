@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* Clearfix
+=================================*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hide from Mac IE \*/
+
+.clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+/* Hide from Mac IE */
+
+html,body{
+     height:100%;
+}
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "Osaka", sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	color: #333;
+}
+#wrap {
+    height:100%;	
+	background:url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+}
+#txt_meta {
+	position: absolute;
+	top: 40px;
+	left: 50px;
+}
+#nav {
+	width: 100%;
+	background: #000;
+	height: 36px;
+	padding: 24px 0 0 0;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#nav a {
+	color: #fff;
+	text-decoration: none;
+}
+#nav ul {
+	float: right;
+}
+#nav ul li {
+	float: left;
+	margin: 0 32px 0 0;
+}
+#pic01 {
+	background: url(../img/pic01.jpg) no-repeat center center;
+	background-size: cover;
+	height: 600px;
+}
+#pic02 {
+	background: url(../img/pic02.jpg) no-repeat center center;
+	background-size: cover;
+	height: 600px;
+}
+#pic03 {
+	background: url(../img/pic03.jpg) no-repeat center center;
+	background-size: cover;
+	height: 600px;
+}
+#pic04 {
+	background: url(../img/pic04.jpg) no-repeat center center;
+	background-size: cover;
+	height: 600px;
+}
+.hl {
+	margin: 158px 0 70px 0;
+	text-align: center;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>WebDesigning</title>
+	<meta name="keywords" content="Web Designing Tooltip">
+	<meta name="description" content="Web Designing 2014年9月号サンプル Tooltip">
+	<link rel="stylesheet" type="text/css" href="common/css/cmn_layout.css">
+	<link rel="stylesheet" type="text/css" href="common/css/tooltips.css">
+	<link rel="stylesheet" type="text/css" href="common/css/jquery.powertip.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<script type="text/javascript" src="common/js/jquery.powertip.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.north').powerTip({placement: 'n'});
+		$('.south').powerTip({placement: 's'});
+		$('.west').powerTip({placement: 'w'});
+		$('.east').powerTip({placement: 'e'});
+		$('.north-west').powerTip({placement: 'nw'});
+		$('.north-east').powerTip({placement: 'ne'});
+		$('.south-west').powerTip({placement: 'sw'});
+		$('.south-east').powerTip({placement: 'se'});
+		$('.follow').powerTip({followMouse: true});
+	});
+	</script>
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body id="gDef" class="lDef">
+
+<div id="wrapper">
+
+	<h1>Tooltip</h1>
+	
+	<section class="section01">
+		<h2>シンプルツールチップ</h2>
+		<ul class="ul_sample01">
+			<li class="north" title="サンプルメッセージ（北）">吹き出し北</li>
+			<li class="south" title="サンプルメッセージ（南）">吹き出し南</li>
+			<li class="west" title="サンプルメッセージ（西）">吹き出し西</li>
+			<li class="east" title="サンプルメッセージ（東）">吹き出し東</li>
+			<li class="north-west" title="サンプルメッセージ（北西）">吹き出し北西</li>
+			<li class="north-east" title="サンプルメッセージ（北東）">吹き出し北東</li>
+			<li class="south-west" title="サンプルメッセージ（南西）">吹き出し南西</li>
+			<li class="south-east" title="サンプルメッセージ（南東）">吹き出し南東</li>
+			<li class="follow" title="サンプルメッセージ（マウス追従型）">マウス追従型</li>
+		</ul>
+	<!-- /section01 --></section>
+
+<!-- /wrapper --></div>
+
+</body>
+</html>

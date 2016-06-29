@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="ja" class="lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>わりとよくあるタイプのヘッダーレイアウト。</title>
+<meta name="viewport" content="width=1024">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+  <div class="inner">
+    <h1 class="logo"><span>Web</span>Designing</h1>
+    <ul class="sns">
+      <li><a href="" title="twitter"></a></li>
+      <li><a href="" title="facebook"></a></li>
+      <li><a href="" title="google"></a></li>
+    </ul>
+    <div class="nav">
+      <ul class="gnav">
+        <li><a href="">Service</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Works</a></li>
+        <li><a href="">Recruit</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="contents">
+  <h2 class="label">HTML</h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>&lt;div id="header"&gt;</code></li>
+      <li><code>  &lt;div class="inner"&gt;</code></li>
+      <li><code>    &lt;h1 class="logo"&gt;&lt;span&gt;Web&lt;/span&gt;Designing&lt;/h1&gt;</code></li>
+      <li><code>    &lt;ul class="sns"&gt;</code></li>
+      <li><code>      &lt;li&gt;&lt;a href="" title="twitter"&gt;&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>      &lt;li&gt;&lt;a href="" title="facebook"&gt;&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>      &lt;li&gt;&lt;a href="" title="google"&gt;&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>    &lt;/ul&gt;</code></li>
+      <li><code>    &lt;div class="nav"&gt;</code></li>
+      <li><code>      &lt;ul class="gnav"&gt;</code></li>
+      <li><code>        &lt;li&gt;&lt;a href=""&gt;Service&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>        &lt;li&gt;&lt;a href=""&gt;About&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>        &lt;li&gt;&lt;a href=""&gt;Works&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>        &lt;li&gt;&lt;a href=""&gt;Recruit&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>        &lt;li&gt;&lt;a href=""&gt;Contact&lt;/a&gt;&lt;/li&gt;</code></li>
+      <li><code>      &lt;/ul&gt;</code></li>
+      <li><code>    &lt;/div&gt;</code></li>
+      <li><code>  &lt;/div&gt;</code></li>
+      <li><code>&lt;/div&gt;</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">CSS<span>（メニュー部分）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>#header ul li {</code></li>
+      <li><code>  text-align: center;</code></li>
+      <li><code>}</code></li>
+      <li><code>#header ul li a {</code></li>
+      <li><code>  display: table-cell;</code></li>
+      <li><code>  height: 90px;</code></li>
+      <li><code>  vertical-align: middle;</code></li>
+      <li><code>  text-decoration: none;</code></li>
+      <li><code>  box-sizing: border-box;</code></li>
+      <li><code>}</code></li>
+      <li><code>#header .nav li a {</code></li>
+      <li><code>  width: 100px;</code></li>
+      <li><code>}</code></li>
+      <li><code>#header .sns li a {</code></li>
+      <li><code>  width: 40px;</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">CSS<span>（アイコンフォントの指定）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>/* <a href="http://kudakurage.com/ligature_symbols/">http://kudakurage.com/ligature_symbols/</a> */</code></li>
+      <li><code>@font-face {</code></li>
+      <li><code>  font-family: 'LigatureSymbols';</code></li>
+      <li><code>  src: url('LigatureSymbols/LigatureSymbols-2.11.eot');</code></li>
+      <li><code>  src: url('LigatureSymbols/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),</code></li>
+      <li><code>       url('LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'),</code></li>
+      <li><code>       url('LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype'),</code></li>
+      <li><code>       url('LigatureSymbols/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');</code></li>
+      <li><code>  font-weight: normal;</code></li>
+      <li><code>  font-style: normal;</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>#header .sns li a::after {</code></li>
+      <li><code>  content: attr(title);</code></li>
+      <li><code>  font-size: 36px;</code></li>
+      <li><code>  font-family: 'LigatureSymbols';</code></li>
+      <li><code>  -webkit-font-feature-settings: "liga" 1, "dlig" 1;</code></li>
+      <li><code>  -moz-font-feature-settings: "liga=1, dlig=1";</code></li>
+      <li><code>  font-feature-settings: "liga" 1, "dlig" 1;</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

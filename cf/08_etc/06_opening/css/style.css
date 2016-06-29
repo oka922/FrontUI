@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+html,body{
+     height:100%;
+}
+html {
+	background:#000 url(../img/loading.gif) no-repeat scroll center center;
+}
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "Osaka", sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	color: #333;
+	background:url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+}
+#txt_meta {
+	position: absolute;
+	top: 40px;
+	left: 50px;
+}

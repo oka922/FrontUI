@@ -1,0 +1,104 @@
+@import "compass/css3";
+
+html, body{
+  width: 100%;
+  height: 100%;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  &.active{
+    nav{
+      background: rgba(255,255,255,.9);
+      height: 100%;
+
+      .menu-list-container{
+        opacity: 1;
+      }
+    }
+
+  }
+}
+
+
+
+.main-container{
+  width: 100%;
+  height: 100%;
+  background: url('../images/bg1.jpg') no-repeat center center fixed;
+
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+  .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .text{
+      font-size: 32px;
+      letter-spacing: 3px;
+      color: #ffffff;
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      @include translate(-50%, -50%);
+    }
+  }
+}
+
+nav{
+  color: #333;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 46px;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+
+  @include translate(0, 0);
+  @include transition(all .4s ease-in);
+
+  .menu-icon-container{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+
+    z-index: 9999;
+  }
+
+  .menu-list-container{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    opacity: 0;
+
+    @include transition(opacity .3s);
+
+    ul{
+      @include translate( 0, -50%);
+      width: 100%;
+
+      li{
+
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+      }
+    }
+  }
+}

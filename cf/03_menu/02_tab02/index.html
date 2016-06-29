@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Steps loader</title>
+	<link rel="stylesheet" href="css/steps-loader.css">
+	<link rel="stylesheet" href="css/loadie.css">
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="header">
+			<h1>Steps loader using Loadie.js</h1>
+	</div>
+	<div class="container">
+		<h2 class="text-center">お申し込みの流れ</h2>
+		<div id="steps">
+			<ol>
+				<li class="turn"><a href="#step1" class="active">First Step <span>書類の記入</span></a></li>
+				<li class="turn"><a href="#step2">Second Step <span>郵送</span></a></li>
+				<li class="turn"><a href="#step3">Third Step <span>審査</span></a></li>
+				<li class="turn"><a href="#step4">Done <span>結果ご報告</span></a></li>
+			</ol>
+		</div>
+		<div class="step-group">
+			<section id="step1">
+				<h2>1.書類の記入</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste. <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.
+				</p>
+			</section>
+			<section id="step2">
+				<h2>2.郵送</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste. <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.
+				</p>
+			</section>
+			<section id="step3">
+				<h2>3.審査</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste. <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.
+				</p>
+			</section>
+			<section id="step4">
+				<h2>4.結果のご報告</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste. <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta deleniti cumque aliquam quod aliquid ad sint consequatur pariatur omnis architecto, enim laudantium quaerat facilis qui ullam fugiat, perferendis iste.
+				</p>
+			</section>
+		</div>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.loadie.js"></script>
+	<script src="js/tab-step.js"></script>
+	<script>
+		$(function() {
+			var step = 0.25;
+			$('#steps').loadie(step);
+			$('.turn a').click(function(){
+				var index = $('.turn a').index(this);
+				index++;
+				var turn = index * step;
+				// if(turn >= 1) {
+				// 	 loadie.stop();
+				// }
+				$('#steps').loadie(turn);
+			});
+		});
+	</script>
+</body>
+</html>

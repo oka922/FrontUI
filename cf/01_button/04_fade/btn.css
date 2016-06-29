@@ -1,0 +1,48 @@
+
+body{
+background-color: #3b3b3b;
+}
+
+
+#ce{
+width: 154px;
+height: 43px;
+position:absolute;
+top:50%;
+left:50%;
+margin:-77px 0 0 -21px;
+}
+
+
+
+
+/*ここから*/
+.btn{
+width:154px;
+height:43px;
+
+}
+
+.btn a {
+float: left;
+display: block;
+width:154px;
+height:43px; 
+background: url(img/button2.png) no-repeat;
+margin: 0;
+padding: 0;
+
+
+}
+
+.btn a img {
+vertical-align: top;
+transition: opacity 0.8s;
+
+}
+
+.btn a:hover img {
+
+opacity: 0;
+
+}

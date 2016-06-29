@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Responsive Modal window</title>
+<link rel="stylesheet" href="css/style.css" media="screen, projection, print">
+  <!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$(function(){
+    
+    var openBtn = $('#open_btn'), closeBtn = $('#close_btn'),
+    // ↑ '#open_btn'にオープンボタンID、'#close_btn'にクローズボタンIDを指定
+    modalBox = $('#modalbox'),
+    // ↑ モーダルウィンドウで表示する要素のIDを指定
+    layer = $('<div />').appendTo('body').addClass('layer');
+      
+    openBtn.on("click", function(){
+        modalBox.css({
+	    	top: ($(window).height() - modalBox.outerHeight()) / 2,
+	        left: ($(window).width() - modalBox.outerWidth()) / 2
+		});
+		$([modalBox[0],layer[0]]).fadeIn(300);
+    });
+    $([layer[0],closeBtn[0]]).on("click", function(){
+        $([modalBox[0],layer[0]]).fadeOut(300);
+    });
+	$(window).resize(function () {
+		modalBox.css({
+        	top: ($(window).height() - modalBox.outerHeight()) / 2,
+			left: ($(window).width() - modalBox.outerWidth()) / 2
+    	});
+    });
+	
+});
+</script>
+
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Responsive Modal window</h1>
+    </header><!-- fin_header -->
+
+    <div class="content">
+        <p>In user interface design, a modal window is a graphical control element subordinate to an application's main window which creates a mode where the main window can't be used. The modal window is a …
+        </p>
+
+        <!--オープンボタンここから-->
+        <button id="open_btn">
+        <span class="icon-arrow-right"></span> 
+        Readmore
+        </button>
+        <!--オープンボタンここまで-->
+        
+        <!--モーダルウィンドウ部分ここから-->
+        <div id="modalbox">
+            
+            <!--クローズボタン-->
+            <button id="close_btn"><span class="icon-close"></span></button>
+            
+            <section>
+                <h2>Modal window</h2>
+                <p>In user interface design, a modal window is a graphical control element subordinate to an application's main window which creates a mode where the main window can't be used. The modal window is a child window that requires users to interact with it before they can return to operating the parent application, thus preventing the workflow on the application main window. Modal windows are often called heavy windows or modal dialogs because the window is often used to display a dialog box.
+        Modal windows are commonly used in GUI systems to command user awareness and to display emergency states, although they have been argued to be ineffective for that use.[1] Modal windows are prone to produce mode errors.
+        On the Web, they are often used to show images in detail, such as ones implemented by Lightbox library</p>
+            </section>
+        </div>
+        <!--モーダルウィンドウ部分ここまで-->
+        
+    </div><!--content-->
+</div><!--container-->
+</body>
+</html>

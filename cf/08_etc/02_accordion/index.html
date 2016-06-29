@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<!--[if IE 8]> <html lang="ja" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>シンプルなアコーディオン式コンテンツのひな形。</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="normalize.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+<div id="contents">
+  <h1>シンプルなアコーディオン式コンテンツ。</h1>
+  <p>HTMLとCSSだけで実装できるから、シンプル・軽量・かんたん設置。</p>
+  <div class="accordion">
+    <label>
+      <input type="checkbox" name="accordion">
+      <div id="section1" class="section">
+        <h2>Social Good Ipsum: Smart dummy copy for people who give a damn</h2>
+        <div class="inner">
+          <p> Global leaders invest; challenges of our times assessment expert Action Against Hunger equity. Courageous, replicable sanitation expanding community ownership human experience pathway to a better life combat poverty. Empowerment, crisis situation think tank solve frontline cooperation healthcare prevention. Small-scale farmers, readiness collaborative cities Gandhi social responsibility reduce carbon emissions nonviolent resistance. Justice scalable, 501(c)(3) planned giving, lifting people up agriculture catalyze giving. Positive social change women's rights, solutions, our ambitions shift crowdsourcing humanitarian relief. Engage; gender policymakers challenges civic engagement accessibility revitalize improving quality. Fellows, emergent educate progressive, end hunger strengthen democracy foundation. Activist process advocate marginalized communities breakthrough insights.</p>
+        </div>
+      </div>
+    </label>
+    <label>
+      <input type="checkbox" name="accordion">
+      <div id="section2" class="section">
+        <h2>Cupcake Ipsum - Sugar-coated Lorem Ipsum Generator</h2>
+        <div class="inner">
+          <p>Liquorice sugar plum powder liquorice chocolate bar marshmallow cheesecake biscuit. Chocolate cake cheesecake marzipan chocolate cake jelly-o tart marzipan cupcake liquorice. Wafer dessert chocolate cake halvah jelly-o. Candy canes jelly beans bear claw brownie macaroon donut muffin halvah ice cream. Gummies gummi bears marshmallow. Soufflé marzipan liquorice dessert topping chocolate cake chupa chups jujubes. Sweet roll sweet jujubes. Pudding wafer applicake jelly-o tart cupcake jelly beans. Powder bear claw tart apple pie sweet danish sesame snaps. Gingerbread gingerbread oat cake carrot cake croissant pie lollipop ice cream unerdwear.com. Marshmallow danish sweet jelly-o donut applicake candy dragée pie. Candy canes cotton candy tart tootsie roll.</p>
+        </div>
+      </div>
+    </label>
+    <label>
+      <input type="checkbox" name="accordion">
+      <div id="section3" class="section">
+        <h2>Lorem Ipsum - All the facts - Lipsum generator</h2>
+        <div class="inner">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta sodales nulla, in porta lectus imperdiet ac. Donec ultricies volutpat purus sed ultrices. Morbi dictum varius blandit. Ut non gravida enim. Donec pretium vitae justo id pellentesque. Vivamus tristique varius leo quis sollicitudin. Morbi molestie mattis dolor in mollis. Mauris auctor dignissim vulputate. Donec ligula urna, posuere vitae convallis eu, fringilla id arcu. Phasellus sit amet leo id ante porta auctor aliquam id lacus. Duis at dictum orci. Nam quis congue dui, non aliquam ante.</p>
+        </div>
+      </div>
+    </label>
+    <label>
+      <input type="checkbox" name="accordion">
+      <div id="section4" class="section">
+        <h2>Hipster Ipsum | Artisanal filler text for your site or project.</h2>
+        <div class="inner">
+          <p>Literally single-origin coffee before they sold out, whatever Intelligentsia skateboard bespoke master cleanse swag. Literally Brooklyn shabby chic, meh hella salvia slow-carb normcore. Bushwick bitters distillery, Blue Bottle asymmetrical freegan artisan church-key fixie chia lomo paleo kale chips. Bespoke 90's VHS, ennui Kickstarter sriracha mlkshk fashion axe whatever single-origin coffee sartorial vinyl. Polaroid pickled squid, sartorial direct trade seitan Banksy Truffaut Cosby sweater whatever bicycle rights keytar gastropub flexitarian butcher. Sriracha irony flexitarian street art. Shabby chic ethnic fingerstache, deep v jean shorts selfies banh mi kogi blog narwhal retro vegan hashtag cred occupy.</p>
+        </div>
+      </div>
+    </label>
+    <label>
+      <input type="checkbox" name="accordion">
+      <div id="section5" class="section">
+        <h2>HTML-Ipsum</h2>
+        <div class="inner">
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </div>
+      </div>
+    </label>
+  </div>
+  
+  <h2 class="label">HTML<span>（抜粋）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>&lt;div class="accordion"&gt;</code></li>
+      <li><code>  &lt;label&gt;</code></li>
+      <li><code>    &lt;input type="checkbox" name="accordion"&gt;</code></li>
+      <li><code>    &lt;div id="section1" class="section"&gt;</code></li>
+      <li><code>      &lt;h2&gt;Social Good Ipsum: Smart dummy copy for people who give a damn&lt;/h2&gt;</code></li>
+      <li><code>      &lt;div class="inner"&gt;</code></li>
+      <li><code>        &lt;p&gt;Global leaders invest; challenges of our times assessment ...&lt;/p&gt;</code></li>
+      <li><code>      &lt;/div&gt;</code></li>
+      <li><code>    &lt;/div&gt;</code></li>
+      <li><code>  &lt;/label&gt;</code></li>
+      <li><code>  &lt;label&gt;</code></li>
+      <li><code>    &lt;input type="checkbox" name="accordion"&gt;</code></li>
+      <li><code>    &lt;div id="section2" class="section"&gt;</code></li>
+      <li><code>      ......</code></li>
+      <li><code>    &lt;/div&gt;</code></li>
+      <li><code>  &lt;/label&gt;</code></li>
+      <li><code>&lt;/div&gt;</code></li>
+    </ol>
+  </pre>
+  
+  <h2 class="label">CSS<span>（抜粋）</span></h2>
+  <pre class="synthax">
+    <ol>
+      <li><code>.accordion input {</code></li>
+      <li><code>  display: none;</code></li>
+      <li><code>}</code></li>
+      <li><code>.accordion label {</code></li>
+      <li><code>  cursor: pointer;</code></li>
+      <li><code>}</code></li>
+      <li><code>.accordion .section {</code></li>
+      <li><code>  overflow: hidden;</code></li>
+      <li><code>  height: 60px;</code></li>
+      <li><code>  border-top: 1px solid rgba(255,255,255,.4);</code></li>
+      <li><code>  border-bottom: 1px solid rgba(0,0,0,.2);</code></li>
+      <li><code>  color: white;</code></li>
+      <li><code>  transition-property: height, background;</code></li>
+      <li><code>  transition-duration: .6s, 1s;</code></li>
+      <li><code>  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1), ease;</code></li>
+      <li><code>  box-sizing: border-box;</code></li>
+      <li><code>}</code></li>
+      <li><code></code></li>
+      <li><code>.accordion input:checked + .section {</code></li>
+      <li><code>  height: 390px;</code></li>
+      <li><code>}</code></li>
+      <li><code>.accordion input:checked + .section .inner {</code></li>
+      <li><code>  opacity: 1;</code></li>
+      <li><code>  transition-delay: .4s;</code></li>
+      <li><code>}</code></li>
+    </ol>
+  </pre>
+</div>
+
+</div>
+</body>
+</html>

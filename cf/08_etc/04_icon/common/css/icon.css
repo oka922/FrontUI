@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* !tab.css
+---------------------------------------------------------- */
+.news01 {	
+}
+	.news01 dt {
+		margin-bottom: 5px;
+		font-size: 115%;
+	}
+	.news01 dd {
+		margin-bottom: 10px;
+		font-size: 130%;
+	}
+		.news01 dd a {
+			padding: 10px 0 10px 40px;
+			color: #666;
+			background: url(../img/link.png) no-repeat left top;
+		}
+		.news01 dd a.xls {
+			background: url(../img/xls.png) no-repeat left top;
+		}
+		.news01 dd a.zip {
+			background: url(../img/zip.png) no-repeat left top;
+		}
+		.news01 dd a.pdf {
+			background: url(../img/pdf.png) no-repeat left top;
+		}
+		.news01 dd a.jpg {
+			background: url(../img/jpg.png) no-repeat left top;
+			
+		}
+		.news01 dd a.blank {
+			background: url(../img/blank.png) no-repeat left top;
+		}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Down Menu Click</title>
+<link rel="stylesheet" href="css/style.css" media="screen, projection, print">
+  <!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script>
+$(function(){
+	var openBtn = $('#btn'), slideMenu = $('#menu'),
+        // ↑ '#btn'にオープン・クローズボタンID、'#menu'にメニュー要素IDを指定
+		layer = $('<div />').addClass('layer');
+		
+		openBtn.on("click", function(){
+			if (slideMenu.is(':hidden')){
+				layer.appendTo('body');
+	            slideMenu.slideDown(300);
+                // ↑かっこ内の数字でアニメーションスピード設定（ミリ秒単位）
+	        }else{
+	            slideMenu.slideUp(300);
+                // ↑かっこ内の数字でアニメーションスピード設定（ミリ秒単位）
+	            layer.remove();
+	        }
+		});
+ });
+</script>
+
+</head>
+<body>
+
+    <!--スライドアニメーションする部分ここから-->
+    <div class="slide_container">
+       
+        <!--↓メニュー-->
+        <nav id="menu">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+        
+        <!--↓クリックボタン-->
+        <div id="btn"><span></span></div>
+    </div>
+    <!--スライドアニメーションする部分ここまで-->
+
+    <div class="container">
+        <header id="header">
+            <h1>Down Menu ↑ Click</h1>
+        </header><!-- fin_header -->
+
+        <div class="content">
+            <p>Swans are birds of the family Anatidae within the genus Cygnus. The swans' close relatives include the geese and ducks. Swans are grouped with the closely related geese in the subfamily Anserinae where they form the tribe Cygnini.</p>
+            <img src="img/tori.png" alt="白鳥">
+            <p> Sometimes, they are considered a distinct subfamily, Cygninae.There are six or seven species of swan in the genus Cygnus; in addition there is another species known as the coscoroba swan, although this species is no longer considered one of the true swans.Swans usually mate for life, though "divorce" does sometimes occur, particularly following nesting failure.</p>
+             <p> And if a mate dies, or is killed by a predator, the remaining mate will take up with another; however, if all goes well in the pairing, they indeed will stay together for life. The number of eggs in each clutch ranges from three to eight.</p>
+        </div><!-- fin_content-->
+
+        <footer class="footer">
+                <p><small>Copyright&copy; Example.All Right Reserved</small></p>
+        </footer><!-- fin_footer -->
+    </div><!--container-->
+</body>
+</html>

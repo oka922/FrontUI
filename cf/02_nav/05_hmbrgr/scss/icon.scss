@@ -1,0 +1,69 @@
+@import "compass/css3";
+
+$MENU_WIDTH: 22px;
+
+
+
+.demo{
+  margin: auto;
+  margin-top: 60px;
+  padding: 75px 0 10px;
+  width: $MENU_WIDTH;
+}
+
+.menu-icon{
+  display: block;
+  float: left;
+  cursor: pointer;
+
+  @include transition( all .2s ease-in );
+
+  span {
+    &.bar1{
+      margin-top: 2px;
+    }
+
+    display: block;
+    width: $MENU_WIDTH;
+    height: 4px;
+    background: #333333;
+    margin-bottom: 2px;
+    border-radius: 1px;
+
+    @include transition( all .4s ease-out );
+  }
+
+  &:hover{
+    span {
+      margin-bottom: 4px;
+      &.bar1{
+        margin-top: 0px;
+      }
+
+    }
+  }
+
+  &.active{
+    @include transform(rotate(-45deg));
+
+    &:hover{
+      span{
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+    }
+
+
+    .bar1 {
+      @include transform(rotate(0deg) translateY(6px));
+    }
+
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      @include transform(rotate(-90deg) translateX(5px));
+    }
+  }
+}
