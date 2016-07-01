@@ -1,0 +1,84 @@
+// ==========================================================================
+// ####@mixin の使い方
+//
+// 1. @import "base file"を行う
+//
+// 2. .scssで@mixin nameでモジュール化を行う
+//
+// 3. include name{}でモジュールを読み込む
+// ========================================================================== */
+
+
+
+// ==========================================================================
+// 変数登録
+// ==========================================================================
+
+$mobile-width: 640px;
+$h1_font_size:20px;
+
+
+// ==========================================================================
+// Color
+// ========================================================================== */
+
+$base_color:#555;
+$vivid_color:#eee;
+$h1_color:#28214c;
+$h2_color:#fff;
+
+
+// ==========================================================================
+// responsible
+// ==========================================================================
+
+
+@mixin desktop {
+  @media only screen and (min-width: $tablet-width + 1) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+
+// ==========================================================================
+// effect
+//
+// ex. @include border-radius(5px);
+// ==========================================================================
+
+@@mixin border-radius ($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+  $opacity-ie: $opacity * 100;
+  opacity: $opacity;
+  filter: alpha(opacity = $opacity-ie);
+}
+
+@mixin font-size($_target_size, $_base_size:10) {
+  font-size: $_target_size + px;
+  font-size: ($_target_size / $_base_size) * 1rem;
+}
+
+@mixin transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}

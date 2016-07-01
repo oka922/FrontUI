@@ -1,0 +1,73 @@
+
+/*よく使うCSSのまとめ
+/*display,positon,margin,font,@media,li,hoverあたり
+   ========================================================================== */
+
+
+/* state
+/*
+    =========================================================================*/
+   .dn {
+     display: none;
+   }
+
+   .db {
+     display: block;
+   }
+
+   /* Float
+      ========================================================================== */
+   .pull-none {
+     float: none !important;
+   }
+
+   .pull-left {
+     float: left !important;
+   }
+
+   .pull-right {
+     float: right !important;
+   }
+
+   .clear-both {
+     clear: both !important;
+   }
+
+   .clear-left {
+     clear: left !important;
+   }
+
+   .clear-right {
+     clear: right !important;
+   }
+
+   .clearfix {
+     zoom: 1;
+   }
+   .clearfix:after {
+     content: "";
+     display: block;
+     clear: both;
+   }
+
+    /* a
+    /*
+        ========================================================================== */
+
+        a {
+          color: #2693ff; }
+          a:visited {
+            color: #5c1a86; }
+          a:focus {
+            color: #2693ff; }
+          a:hover {
+            color: #2693ff; }
+          a:active {
+            color: #2693ff; }
+          a:link, a:visited {
+            text-decoration: none; }
+          a:hover, a:active, a:focus {
+            text-decoration: underline; }
+          @media screen and (max-width: 800px) {
+            a:hover, a:active, a:focus {
+              text-decoration: none; } }
