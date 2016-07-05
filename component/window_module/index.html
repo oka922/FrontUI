@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="Living is Hard">
+<title>LiH</title>
+<meta property="og:title" content="Living is Hard" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Living is Hard" />
+<meta property="og:url" content="https://lih.co.jp" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:locale" content="ja_JP" />
 <title></title>
-<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="resizable/jquery-ui.css" />
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
 <meta name="viewport" content="width=device-width">
 <!--[if lt IE 9]>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -14,192 +28,6 @@
 
 </head>
 <body>
-<style>
-
-.window{
-  position: absolute;
-  top:15%;
-  left: 30%;
-}
-.window-nav{
-  position: absolute;
-  top: -30px;
-}
-.window-nav-tab{
-  clear: both;
-}
-.window-nav-tab-a {
-    float: left;
-    margin-left: 10px;
-    border-top: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    padding: 5px;
-    background: #fff;
-}
-.is-render{
-  background: #fff;
-  border:1px solid #333;
-  min-width: 600px;
-  max-width: 1200px;
-  width: 600px;
-  height:700px;
-  overflow-x: hidden;
-}
-.column{
-  margin: 30px;
-}
-.column-s-title{
-  margin: 15px 0;
-}
-.column-s-title{
-  font-size: 24px;
-}
-.column-s-title-en{
-  font-size: 24px;
-}
-.column-s-title-jp{
-  font-size: 18px;
-}
-.img_thumnail{
-  width:100%;
-}
-
-.is-render::-webkit-scrollbar
-{
-        width:5px;
-        background:#eee;
-}
-        .is-render::-webkit-scrollbar:horizontal
-        {
-                height:5px;
-        }
-.is-render::-webkit-scrollbar-button
-{
-        width:5px;
-        height:5px;
-        background:#666;
-}
-.is-render::-webkit-scrollbar-piece
-{
-        background:#eee;
-}
-        .is-render::-webkit-scrollbar-piece:start
-        {
-                background:#eee;
-        }
-.is-render::-webkit-scrollbar-thumb
-{
-        background:#333;
-}
-.is-render::-webkit-scrollbar-corner
-{
-        background:#333;
-}
-
-.show{
-  visibility: visible !important;
-}
-.disNon{
-  display: none;
-}
-
-.is-clicked{
-  background:black;
-  color: white;
-}
-.is-current{
-  background:black;
-  color: #fff;
-}
-.btn_op{
-  color:#999;
-}
-.btn_op:hover{
-  color:#111;
-  transition: 1s;
-}
-
- .logo{
-    margin-left: 80px;
-    margin-top: 80px;
-    width: 200px;
-    height: 280px;
-    border: 1px solid;
- }
- .info{
-       margin-left:16px
- }
- .about{
-   position: absolute;
-   top: 0px;
-   display: none;
-   padding-bottom: 10px;
-   background: #fff;
-   border-bottom: #444 solid 1px;
-   width: 100%;
- }
-.aboutInner{
-  clear:both;
-}
-.aboutInner dl{
-  float: right;
-}
-.aboutInner_left{
-  float: left;
-  margin: 0 15px;
-}
- .project-nav{
-    position: absolute;
-    right: 5%;
-    width: 450px;
-    bottom: 10%;
- }
- .close_btn{
-    font-size: 18px;
-    padding: 3px;
-    width: 20px;
-    height: 20px;
-    margin-top: 27px;
-}
-
-
-.slide{
-    min-width: 880px;
-    min-height: 880px;
-    max-width: 1200px;
-    overflow: hidden;
-    max-height: 1200px;
-}
-#slideshow{
-    width: 60%;
-    height: 60%;
-    margin: 0 auto;
-}
-
-.item{
-  position: absolute;
-  width:640px;
-  opacity:0;
-  transition:1s;
-}
-
-.is-slide{
-  opacity:1; 
-  transition:1s;
-}
-
-@media screen and (max-width: 800px) {
-  .wrapper{
-    width : 100%;
-  }
-  .logo ,.project-nav{
-    display: none;
-  }
-}
-
-</style>
-
 <div class="wrapper">
   <div class="about">
       <div class="aboutInner" class="cf">
@@ -230,9 +58,9 @@
       <div class="info">about</div>
     </div>
   </header>
-  <!--   <div class="slide is-drag">
+    <!-- <div class="slide is-drag">
         <ul id="slideshow">
-          <li><img class="item show" src="img/01.jpg" alt=""></li>
+          <li><img class="item show" src="img/01.jpg" alt="" ></li>
           <li><img class="item " src="img/02.jpg" alt=""></li>
           <li><img class="item " src="img/03.jpg" alt=""></li>
           <li><img class="item " src="img/04.jpg" alt=""></li>
@@ -421,163 +249,5 @@
 <!--should separate execute and module parts-->
 <!--window_module-->
 
-<script>
-
-
-$(window).load(function(){
-
-
-    close_btn(".close_btn",".window");
-    typeAnimeStart(".de",".btn_op",".t_a_");
-    make_window(".window",".is-resizable");
-    call_window(".cat_module",".item-surface");
-    call_window(".cat_wireless",".item-radio");
-    call_window(".cat_extreme",".item-extreme");
-    call_window(".cat_bio",".item-bio");
-    contentTab();
-    ImgSlide(".item");
-   // max_zindex(".window");
-    max_zindex(".window");
-    max_zindex(".slide");//interfere
-    aboutslide(".info",".about");
-});
-
-   
-
-    
-    function max_zindex(target){
-      var count = 10;
-      $(target).click(function(){
-        console.log("count");
-        $(this).css("z-index",count);
-        count += 1;
-      })
-    }
-
-    function ImgSlide(item_slide) {
-
-        var img = $(item_slide),
-        num = img.length,
-        count = 0,//表示されている画像の順番
-        interval = 3000;
-        setInterval(function() {
-        img.eq(count).addClass("is-slide");//eqで配列の番号指定ができる
-        count = count + 1;//次の画像になる。
-        img.eq(count-2).removeClass("is-slide");
-        if (num<=count) {
-          count = 0;
-        };
-        }, interval);
-
-    }
-
-    function aboutslide(item,slide_frame){
-       console.log(item);
-      $(item).click(function(){
-        console.log(item);
-        $(slide_frame).slideToggle();
-      })
-    }
-    //このときのeachとindexは曲者で、セレクタ内の
-    function contentTab(){
-      var n = 0;
-      $(".window-nav-tab li").each(function(){//liは２要素該当しているから何故に、二回まわしているのかわからない。
-        n = n +1;
-        //console.log(this,n);
-        $(this).click(function(){
-          console.log(this);//thisは選択したli要素になる。その親の子供を選択したうちのthisの番号を聞いている
-          var num = $(this).parent(".window-nav-tab").children("li").index(this);
-          console.log(num);
-          var selector = $(this).parents(".window-nav").next(".is-render");
-          $(selector).find(".column").addClass("disNon");//thisの親の親の兄弟の.is-renderを獲得したい。
-          $(selector).find('.column').eq(num).removeClass("disNon");
-          $(this).parent(".window-nav-tab").children('li').removeClass('is-current');//全ての子供を消す
-          $(this).addClass('is-current');
-        })
-      })}
-  
-
-    //navigation
-
-    // function call_window(target,window_state){
-    //   $(target).on("click",function(){
-    //     $(window_state).removeClass("disNon");
-    //   })
-    // };
-
-    function call_window(click_nav,target){
-        $(click_nav).on("click",function(){
-          console.log(target,click_nav);
-          $(target).removeClass("disNon");
-        })
-    }
-
-        function call_window_ver2(click_nav_array,target_array){
-          var click_array = ["cat_bio","cat_extreme","cat_energy","cat_wireless"];
-          var item_array = ["item-bio","item-extreme","item-surface","item-radio"]
-          $(click_nav).on("click",function(){
-            console.log(target,click_nav);
-            $(target).removeClass("disNon");
-        })
-    }//配列にcat_****とitem_****を集める、array1[i]とarray2[i]をeachで呼び出す、または配列にいれてクリックしてindexとeqを指定して、disNon
-
-
-    function changeTab(tab,tab_name_a,tab_name_b,column){
-        var tab_root = $(tab);
-        var tab_one = $(tab_name_a);
-        var tab_second = $(tab_name_b);
-        tabre.on('click',function() {
-          tab_one.removeClass("is-clicked");
-          tab_second.addClass("is-clicked");
-          $(".is-render").find(".column").removeClass("is-show");
-          $(".is-render").find(column).addClass("is-show");
-        });
-    }
-
-
-    function close_btn(btn,windows){
-        $(btn).on("click",function(){
-        $(this).parents(windows).addClass("disNon");
-      })
-    }
-
-    function make_window(window,resize){
-      var c_height = $(".column").innerHeight();
-      $(function(){
-        $(".is-drag").draggable();
-      });
-      $(function() {
-       $( ".is-resizable" ).resizable({
-         maxHeight: 900,
-         maxWidth: c_height,
-         minHeight: 350,
-         minWidth: 650
-       });
-     });
-    }
-
-    function typeAnimeStart(ancer_word,target,key){
-        $(".de").css("visibility","hidden");
-        typeAnime(".btn_op",".t_a_");
-    }
-
-    function typeAnime(ancer_word,ani_word) {
-
-        var aw = $(ancer_word);//変化をかける単語
-        var type = $(ani_word);//変化する一文字一文字
-        count = 0,//表示されている画像の順番
-        interval = 100;
-        var timet = setInterval(function() {
-        $(aw).find(ani_word+count).css("visibility","visible");
-        count = count + 1;//次の画像になる。
-        console.log(ani_word+count);
-        if(count >10){
-          clearInterval(timet);
-        }
-        }, interval);
-    }
-
-
-</script>
 </body>
 </html>

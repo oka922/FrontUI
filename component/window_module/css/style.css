@@ -1,0 +1,198 @@
+
+.window{
+  position: absolute;
+  top:15%;
+  left: 30%;
+}
+.window-nav{
+  position: absolute;
+  top: -30px;
+}
+.window-nav-tab{
+  clear: both;
+}
+.window-nav-tab-a {
+    float: left;
+    margin-left: 10px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding: 5px;
+    background: #fff;
+}
+.is-render{
+  background: #fff;
+  border:1px solid #333;
+  min-width: 600px;
+  max-width: 1200px;
+  width: 600px;
+  height:700px;
+  overflow-x: hidden;
+}
+.column{
+  margin: 30px;
+}
+.column-s-title{
+  margin: 15px 0;
+}
+.column-s-title{
+  font-size: 24px;
+}
+.column-s-title-en{
+  font-size: 24px;
+}
+.column-s-title-jp{
+  font-size: 18px;
+}
+.img_thumnail{
+  width:100%;
+}
+
+.is-render::-webkit-scrollbar
+{
+        width:5px;
+        background:#eee;
+}
+        .is-render::-webkit-scrollbar:horizontal
+        {
+                height:5px;
+        }
+.is-render::-webkit-scrollbar-button
+{
+        width:5px;
+        height:5px;
+        background:#666;
+}
+.is-render::-webkit-scrollbar-piece
+{
+        background:#eee;
+}
+        .is-render::-webkit-scrollbar-piece:start
+        {
+                background:#eee;
+        }
+.is-render::-webkit-scrollbar-thumb
+{
+        background:#333;
+}
+.is-render::-webkit-scrollbar-corner
+{
+        background:#333;
+}
+
+.show{
+  visibility: visible !important;
+}
+.disNon{
+  display: none;
+}
+
+.is-clicked{
+  background:black;
+  color: white;
+}
+.is-current{
+  background:black;
+  color: #fff;
+}
+.btn_op{
+  color:#999;
+}
+.btn_op:hover{
+  color:#111;
+  transition: 1s;
+}
+
+ .logo{
+    background:#fff;
+    margin-left: 80px;
+    margin-top: 80px;
+    width: 200px;
+    height: 280px;
+    border: 1px solid;
+ }
+ .info{
+       margin-left:16px
+ }
+ .about{
+   position: absolute;
+   top: 0px;
+   display: none;
+   padding-bottom: 10px;
+   background: #fff;
+   border-bottom: #444 solid 1px;
+   width: 100%;
+ }
+
+
+.aboutInner{
+  clear:both;
+}
+.aboutInner dl{
+  float: right;
+}
+.aboutInner_left{
+  float: left;
+  margin: 0 15px;
+}
+ .project-nav{
+    position: absolute;
+    right: 5%;
+    width: 450px;
+    bottom: 10%;
+ }
+ .close_btn{
+    font-size: 18px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 27px;
+}
+
+
+.slide{
+    min-width: 880px;
+    min-height: 880px;
+    max-width: 1200px;
+    max-height: 1200px;
+}
+#slideshow{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+.item{
+  position: absolute;
+  left:35%;
+  margin-top:-150px;
+  width:340px;
+  opacity:0;
+  transition:1s;
+}
+
+.is-slide{
+  opacity:1;
+  transition:1s;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper{
+    width : 100%;
+  }
+  .project-nav{
+    display: none;
+  }
+  .window{
+    left: 0;
+  }
+  .is-render{
+    width: 100%;
+    max-width: none;
+    min-width: inherit;
+  }
+  .logo{
+    width: 100%;
+    margin-left: 0;
+  }
+}
