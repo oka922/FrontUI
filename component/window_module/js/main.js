@@ -1,4 +1,16 @@
 
+var dataObj = {
+  level:0,
+  bgColorArray:["fff","eee","212121"],
+  titileColourArray:[],
+  resizeSize:650,
+  click_array:[".cat_bio",".cat_extreme",".cat_module",".cat_wireless"],
+  item_array:[".item-bio",".item-extreme",".item-surface",".item-radio"],
+  sp_nonShow:".sp_nonShow"
+}
+
+
+
 $(window).load(function(){
     window_obj.close_btn(".close_btn",".window");
     window_obj.make_window(".window",".is-resizable");
@@ -8,25 +20,58 @@ $(window).load(function(){
     window_obj.max_zindex(".slide");//interfere
     window_obj.aboutslide(".info",".about");
     window_obj.call_window_ver3();
-    // call_window(".cat_module",".item-surface");
-    // call_window(".cat_wireless",".item-radio");
-    // call_window(".cat_extreme",".item-extreme");
-    // call_window(".cat_bio",".item-bio");
-    //call_windowが冗長
     effect_obj.typeAnimeStart(".de",".btn_op",".t_a_");
-    responsible(650);
 });
 
 
-    function responsible(ancer_width){
+$(window).on("load resize",function(){
+    responsible.when_resize(dataObj.resizeSize);
+})
+  var responsible = {
+    get_slide_height:function(ancer){
+      var h = 0;
+      h = $(ancer).find("img").height();
+      return h;
+    },
+    when_resize:function(ancer_width){
       var window_width = $(window).width();
       var width_precise= window.innerWidth;
       if(ancer_width > width_precise){
           $(".window").removeClass("disNon is-drag ui-draggable");
+          $(".sp-nonShow").addClass("disNon");
+          $(".intro").removeClass("disNon");
+          $(".logo").css("display","none");
+           var h =responsible.get_slide_height(".slideshow-list");
+           $(".slideshow-list").css("height",h); 
+      }else if(ancer_width < width_precise){
+          $(".window").addClass("disNon is-drag ui-draggable");
+          $(".sp-nonShow").removeClass("disNon");
+          $(".intro").addClass("disNon");
+          $(".logo").css("display","block");
       }
     }
+    
+  } 
 
+    
 
+  // var change_pc = $(".window").removeClass("disNon is-drag ui-draggable");
+  // var change_sp = $(".logo").css("display","none");
+  
+  // var responsible = {
+
+  //   when_resize:function(ancer_width,el_sp,el_pc){
+  //     var window_width = $(window).width();
+  //     var width_precise= window.innerWidth;
+  //     if(ancer_width > width_precise){
+  //         el_sp;
+  //     }else if(ancer_width < width_precise){
+  //         el_pc;
+  //    }
+  //   }
+  // } 
+
+  
     var window_obj = {
 
           close_btn:function(btn,windows){
@@ -41,21 +86,20 @@ $(window).load(function(){
               })
           },
           call_window_ver3:function(){
-            var click_array = [".cat_bio",".cat_extreme",".cat_module",".cat_wireless"];
-            var item_array = [".item-bio",".item-extreme",".item-surface",".item-radio"]
-             $(click_array[0]).on("click",function(){
+        
+             $(dataObj.click_array[0]).on("click",function(){
                console.log($.inArray(this,click_array));
                console.log($("click_array").index(this));
-                $(item_array[0]).removeClass("disNon");
+                $(dataObj.item_array[0]).removeClass("disNon");
              })
-             $(click_array[1]).on("click",function(){
-                $(item_array[1]).removeClass("disNon");
+             $(dataObj.click_array[1]).on("click",function(){
+                $(dataObj.item_array[1]).removeClass("disNon");
              })
-             $(click_array[2]).on("click",function(){
-                $(item_array[2]).removeClass("disNon");
+             $(dataObj.click_array[2]).on("click",function(){
+                $(dataObj.item_array[2]).removeClass("disNon");
              })
-             $(click_array[3]).on("click",function(){
-                $(item_array[3]).removeClass("disNon");
+             $(dataObj.click_array[3]).on("click",function(){
+                $(dataObj.item_array[3]).removeClass("disNon");
              })
           },
           max_zindex:function(target){
@@ -79,7 +123,6 @@ $(window).load(function(){
                 count = 0;
               };
               }, interval);
-
           },
           aboutslide:function(item,slide_frame){
              console.log(item);
