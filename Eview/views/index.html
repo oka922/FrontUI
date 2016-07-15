@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<base href="/">
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<script src="js/front.js"></script> 
+	<style src="css/style.css"></style>
+	<link rel='stylesheet'  href='css/style.css' type='text/css' media='all' />
+</head>
+<body>
+	<div class="wrapper">
+	<!--Diplay application-->
+	<my-app></my-app>
+
+	<!--Load libraries-->
+	<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+	<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="node_modules/rxjs/bundles/Rx.js"></script>
+	<script src="node_modules/angular2/bundles/angular2.dev.js"></script> 
+
+
+	
+	<!--configure systemJS-->
+	<script>
+		System.config({
+			packages:{
+				scripts:{
+					format:"register",
+					defaultExtension:"js"
+				},
+				components:{
+					format:"register",
+					defaultExtension:"js"
+				}
+			}
+
+		});
+		System.import("scripts/main")
+			//.then(null,console.error.bind(console));
+	</script>
+	<h1>test67</h1>
+
+	<ul id="output"></ul>
+	<script>
+$(function() {
+  $.getJSON("data.json" , function(data) {
+    var
+      ulObj = $("#demo"),
+      len = data.length;
+
+    for(var i = 0; i < len; i++) {
+      ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].name));
+      ulObj.append($("<li>").attr({"id":data[i].id}).text(data[i].watt));
+    }
+  });
+});
+	</script>
+	<span id="demo" style="color:red">dd</span><span id="height">W</span>
+	<div id="display">
+	<ul>
+		<li class="item"><img src="img/bike.jpg" alt=""></li>
+		<li class="item"><img src="img/ref.jpg" alt=""></li>
+		<li class="item"><img class="e_3" src="img/solar.jpg" alt=""></li>
+		<li class="item"><img class="e_4" src="img/atom.jpg" alt=""></li>
+	</ul>
+	</div>
+</div>
+</body>
+</html>
+
+
+<!--用件1,uploadする、指定した位置に画像が配置される-->
+<!---画像とwatt-nameをmongoDBに入れるように、nodeを書く、uploadイベントで画像を#displayの中にclass  itemとel_nでいれてsassで指定したものを書き込む-自動で高さのメーターを表示する->
+<!--nodeでのファイルupload処理とindex.htmlのviewを切り分ける-->
